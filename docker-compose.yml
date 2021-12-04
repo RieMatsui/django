@@ -2,17 +2,17 @@ version: "3.7"
 services:
   django:
     # コンテナ名
-    container_name: app
+    container_name: django
     # ビルドするdockerファイルが格納されたディレクトリ
     build: ./app
     # 正常起動後に実行するコマンド
-    command: python3 manage.py runserver 0.0.0.0:7000
+    command: python3 manage.py runserver 0.0.0.0:7070
     volumes:
       # マウントするディレクトリ
       - ./app:/usr/src/app/
     ports:
       # ホスト側のポート：コンテナ側のポート
-      - 7000:7000
+      - 7070:7070
     env_file:
       # 環境変数に設定するファイル
       - ./app/.env
@@ -21,7 +21,7 @@ services:
       - postgres
 
   postgres:
-    container_name: postgres
+    container_name: postgrespy
     build: ./postgres
     volumes:
       # DBのデータはボリュームを作成して保存
@@ -33,7 +33,7 @@ services:
     env_file: ./postgres/.env_db
     ports:
       # ホスト側のポートはローカルのpsqlとバッティングするので5432以外にする
-      - 5430:5431
+      - 45432:5432
 
   nginx:
     container_name: nginx
