@@ -18,7 +18,9 @@ from django.urls import include, path
 
 urlpatterns = [
     path('andOr/', include('andOr.urls')),
+    path('customerCsv/', include('customerCsv.urls')),
     path('admin/', admin.site.urls),
+
 ]
 
 

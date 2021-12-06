@@ -15,6 +15,9 @@ django-environ = "==0.4.5"
 djoser = "==2.0.3"
 gunicorn = "==20.0.4"
 psycopg2-binary = "==2.8.5"
+pandas = "==1.3.4"
+opencv-python = "==4.5.4.60"
+opencv-contrib-python = "==4.5.4.60"
 
 [requires]
 python_version = "3.7.5"

@@ -10,6 +10,7 @@ RUN apt-get update -y \
     && apt-get install -y python3.7 \
     && source ~/.bashrc \
     && apt-get -y install vim
+    && apt-get install -y libgl1-mesa-dev
 
 # 作業ディレクトリを設定
 WORKDIR /usr/src/app
