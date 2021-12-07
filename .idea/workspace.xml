@@ -6,10 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="572440ff-f440-44da-87b5-28cbcaae66dd" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/app/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Pipfile" beforeDir="false" afterPath="$PROJECT_DIR$/app/Pipfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/config/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/config/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/customerCsv/templates/customerCsv/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/customerCsv/templates/customerCsv/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/customerCsv/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/customerCsv/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/customerCsv/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/customerCsv/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

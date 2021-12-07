@@ -7,8 +7,27 @@
 
 <h2>CSVファイル</h2>
 <br>
+
+<table border="1">
+    <tr>
+        <td>index</td>
+        {% for columns, item in total.iteritems %}
+        <th>{{ columns }}</th>
+        {% endfor %}
+    </tr>
+    {% for index, rows in total.iterrows %}
+    <tr>
+        <th>{{ index }}</th>
+        {% for row in rows %}
+        <td>{{ row }}</td>
+        {% endfor %}
+    </tr>
+    {% endfor %}
+</table>
+<br>
+
 <!-- 読み込んだCSVファイルをテーブル形式で表示 -->
-<p>結果: {{ data_num }}件</p>
+<p>結果: {{ data_num }}件 {{ message }}</p>
 <table border="1">
     <tr>
         <td>index</td>
