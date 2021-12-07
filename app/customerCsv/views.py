@@ -2,6 +2,7 @@ from django.shortcuts import render
 from pandas import pandas as pd
 import csv
 import os
+import datetime
 
 from django.http import HttpResponse
 
@@ -103,7 +104,13 @@ def saleData(request):
                          how='left')
 
     join_data['price'] = join_data['quantity'] * join_data['item_price']
+    join_data['payment_date'] = pd.to_datetime(join_data['payment_date'])
+    join_data['payment_month'] = join_data['payment_date'].dt.strftime('%Y年%m月')
+    join_data['payment_day'] = join_data['payment_date'].dt.strftime('%Y年%m月%d日')
     data_num = len(join_data)
+
+    # 月別集計データ
+    monthly_sale = join_data.groupby('payment_month').sum()['price']
 
     # 欠損値があるかをチェックします
     sum_data = join_data.isnull().values.sum()
@@ -114,10 +121,16 @@ def saleData(request):
     # トータルを出力
     total = join_data.describe()
 
+    min_date = join_data['payment_day'].min()
+    max_date = join_data['payment_day'].min()
+
     context = {
         'df': join_data,
         'data_num': data_num,
         'message': message,
         'total': total,
+        'monthly_sale': monthly_sale,
+        'min_date': min_date,
+        'max_date': max_date,
     }
     return render(request, 'customerCsv/sale_data.html', context)

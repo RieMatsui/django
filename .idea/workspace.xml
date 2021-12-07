@@ -6,8 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="572440ff-f440-44da-87b5-28cbcaae66dd" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/customerCsv/templates/customerCsv/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/customerCsv/templates/customerCsv/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/customerCsv/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/customerCsv/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/customerCsv/templates/customerCsv/sale_data.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/customerCsv/templates/customerCsv/sale_data.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/customerCsv/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/customerCsv/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
