@@ -4,12 +4,30 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="572440ff-f440-44da-87b5-28cbcaae66dd" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/practice/templates/practice/list.html" afterDir="false" />
+    <list default="true" id="5390621b-eeb3-48bb-bc76-5643d3ada9fd" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/app/customerCsv/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/customerCsv/admin.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/customerCsv/apps.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/customerCsv/customer_master.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/customerCsv/file/customer_master.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/customerCsv/file/item_master.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/customerCsv/file/transaction_1.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/customerCsv/file/transaction_2.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/customerCsv/file/transaction_detail_1.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/customerCsv/file/transaction_detail_2.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/customerCsv/migrations/0001_initial.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/customerCsv/migrations/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/customerCsv/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/customerCsv/templates/customerCsv/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/customerCsv/templates/customerCsv/sale_data.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/customerCsv/tests.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/customerCsv/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/customerCsv/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/practice/templates/practice/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/practice/templates/practice/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/practice/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/practice/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/practice/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/practice/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/app/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Pipfile" beforeDir="false" afterPath="$PROJECT_DIR$/app/Pipfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/config/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/config/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/urls.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,15 +45,15 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "com.google.cloudcode.ide_session_index": "20221009_0003",
-    "last_opened_file_path": "/Users/rie/develop/django/app/practice"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;com.google.cloudcode.ide_session_index&quot;: &quot;20221009_0003&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/rie/develop/django/app/practice&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/app/practice" />

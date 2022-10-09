@@ -44,6 +44,7 @@ ALLOWED_HOSTS = ['localhost', '127.0.0.1']
 # Application definition
 
 INSTALLED_APPS = [
+    'customerCsv.apps.CustomercsvConfig',
     'andOr.apps.AndorConfig',
     'practice.apps.PracticeConfig',
     'django.contrib.admin',

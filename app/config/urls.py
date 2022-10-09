@@ -18,8 +18,10 @@ from django.urls import include, path
 
 urlpatterns = [
     path('practice/', include('practice.urls')),
-    path('admin/', admin.site.urls),
+    path('andOr/', include('andOr.urls')),
+    path('customerCsv/', include('customerCsv.urls')),
     path('practice/', include('practice.urls')),
+    path('admin/', admin.site.urls),
 ]
 
 

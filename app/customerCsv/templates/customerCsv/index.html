@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+<head>
+    <title>テストアプリ</title>
+</head>
+<body>
+
+<h2>CSVファイル</h2>
+<br>
+<!-- 読み込んだCSVファイルをテーブル形式で表示 -->
+<p>結果: {{ data_num }}件</p>
+<table border="1">
+    <tr>
+        <td>index</td>
+        {% for columns, item in df.iteritems %}
+        <th>{{ columns }}</th>
+        {% endfor %}
+    </tr>
+    {% for index, rows in df.iterrows %}
+    <tr>
+        <th>{{ index }}</th>
+        {% for row in rows %}
+        <td>{{ row }}</td>
+        {% endfor %}
+    </tr>
+    {% endfor %}
+</table>
+</body>
+</html>

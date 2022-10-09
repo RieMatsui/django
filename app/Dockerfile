@@ -8,6 +8,7 @@ RUN apt-get update -y \
     && apt-get upgrade -y \
     && apt-get install -y python3 python3-dev \
     && apt-get install -y python3.7 \
+    && apt-get install -y libgl1-mesa-dev \
     && source ~/.bashrc \
     && apt-get -y install vim
 
