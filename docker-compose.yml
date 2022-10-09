@@ -21,7 +21,7 @@ services:
       - postgres
 
   postgres:
-    container_name: postgrespy
+    container_name: postgres
     build: ./postgres
     volumes:
       # DBのデータはボリュームを作成して保存
