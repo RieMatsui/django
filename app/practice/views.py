@@ -284,18 +284,9 @@ class List(TemplateView):
 class Seat(TemplateView):
 
     def get(self, request, *args, **kwargs):
-        message = 'NG'
-        seatArray = []
-
-        if 0 <= len(seatArray) < 5:
-            message = 'OK'
-
-        seat = ','.join(seatArray)
 
         context = {
-            'input_seat': seat,
-            'seat': seat,
-            'message': message,
+            'message': '空席があります',
         }
         return render(request, 'practice/seat.html', context)
 
