@@ -1,4 +1,5 @@
 from django.views.generic import TemplateView
+from django.shortcuts import render
 import math
 
 
@@ -92,7 +93,7 @@ class Index(TemplateView):
         context['str_format5'] = 'a is {2} {1} {0}'.format(1, 2, 3)
         context['str_format6'] = 'My name is {1} {0}.'.format('Tanaka', 'Taro')
         context['str_format7'] = 'My name is {1} {0}. Watashi ha {0} {1}'.format('Tanaka', 'Taro')
-        context['str_format8'] = 'My name is {name} {family}. Watashi ha {family} {name}'.\
+        context['str_format8'] = 'My name is {name} {family}. Watashi ha {family} {name}'. \
             format(family='Tanaka', name='Taro')
 
         # 練習15
@@ -265,7 +266,6 @@ class List(TemplateView):
     print('-----------------')
     X = 20
     Y = x
-    Y = 5
     print(id(X))
     print(id(Y))
     print(X)
@@ -281,5 +281,52 @@ class List(TemplateView):
     print('*' * 16)
 
 
+class Seat(TemplateView):
+
+    def get(self, request, *args, **kwargs):
+        message = 'NG'
+        seatArray = []
+
+        if 0 <= len(seatArray) < 5:
+            message = 'OK'
+
+        seat = ','.join(seatArray)
+
+        context = {
+            'input_seat': seat,
+            'seat': seat,
+            'message': message,
+        }
+        return render(request, 'practice/seat.html', context)
+
+    def post(self, request):
+
+        seatStr = ''
+        message = '空席があります'
+        seat = []
+
+        if self.request.POST.get('seat', None):
+            seatStr = request.POST['seat']
+            if seatStr.count(',') > 0:
+                seat = seatStr.split(',')
+            else:
+                seat.append(seatStr)
+
+        if self.request.POST.get('input_seat', None):
+            input_seat = request.POST['input_seat']
+            if 0 <= len(seat) < 5:
+                seat.append(input_seat)
+                seatStr = ','.join(seat)
+
+        if len(seat) == 5:
+            message = '空席がありません'
+
+        context = {
+            'input_seat': '',
+            'seat': seatStr,
+            'message': message,
+        }
+        return render(request, 'practice/seat.html', context)
 
 
+seatView = Seat.as_view()

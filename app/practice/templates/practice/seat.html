@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Seat App</title>
+</head>
+<body>
+  <form action="/practice/seat" method="post">
+    {% csrf_token %}
+    <div>
+      <label for="input_seat">入力してください</label>
+      <input type="text" id="input_seat" name="input_seat" value="{{ input_seat }}">
+    </div>
+    <div>
+      <label for="seat">結果</label>
+      <input type="text" id="seat" name="seat" value="{{ seat }}">
+    </div>
+    <div>
+      <label>{{ message }}</label>
+    </div>
+    <input type="submit" value="送信する">
+  </form>
+</body>
+</html>
