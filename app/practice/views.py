@@ -309,11 +309,19 @@ class Seat(TemplateView):
                 seat.append(input_seat)
                 seatStr = ','.join(seat)
 
+        if self.request.POST.get('delete_seat', None):
+            delete_seat = request.POST['delete_seat']
+
+            if delete_seat in seat:
+                seat.remove(delete_seat)
+                seatStr = ','.join(seat)
+
         if len(seat) == 5:
             message = '空席がありません'
 
         context = {
             'input_seat': '',
+            'delete_seat': '',
             'seat': seatStr,
             'message': message,
         }
