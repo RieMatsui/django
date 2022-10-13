@@ -2,7 +2,7 @@ from django.views.generic import TemplateView
 from django.shortcuts import render
 
 
-class List(TemplateView):
+class Index(TemplateView):
     # テンプレートファイル連携
     template_name = 'practice/lists/index.html'
 

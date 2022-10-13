@@ -5,7 +5,7 @@
     <title>Seat App</title>
 </head>
 <body>
-  <form action="/practice/list/seat" method="post">
+  <form action="/practice/lists/seat" method="post">
     {% csrf_token %}
     <div>
       <label for="input_seat">入力してください</label>
@@ -20,7 +20,10 @@
       <input type="text" id="seat" name="seat" value="{{ seat }}" readonly>
     </div>
     <div>
-      <label>{{ message }}</label>
+      <p>{{ message }}</p>
+      {% if set_seat != '' %}
+      <p>ユニークな値は{{ set_seat }}です</p>
+      {% endif %}
     </div>
     <input type="submit" value="送信する">
   </form>

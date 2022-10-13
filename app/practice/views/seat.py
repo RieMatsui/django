@@ -9,6 +9,7 @@ class Seat(TemplateView):
 
         context = {
             'message': '空席があります',
+            'set_seat': '',
         }
         return render(request, 'practice/lists/seat.html', context)
 
@@ -41,10 +42,12 @@ class Seat(TemplateView):
         if len(seat) == 5:
             message = '空席がありません'
 
+        set_seat = set(seat)
         context = {
             'input_seat': '',
             'delete_seat': '',
             'seat': seatStr,
+            'set_seat': ','.join(set_seat),
             'message': message,
         }
         return render(request, 'practice/lists/seat.html', context)
