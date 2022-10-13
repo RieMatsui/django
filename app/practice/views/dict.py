@@ -73,7 +73,7 @@ class Dict(TemplateView):
         print(x)
         print(y)
 
-        return render(request, 'practice/dict/dict.html')
+        return render(request, 'practice/dict/index.html')
 
 
 class PriceCheck(TemplateView):

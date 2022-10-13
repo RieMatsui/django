@@ -10,7 +10,7 @@ class Seat(TemplateView):
         context = {
             'message': '空席があります',
         }
-        return render(request, 'practice/seat.html', context)
+        return render(request, 'practice/lists/seat.html', context)
 
     def post(self, request):
 
@@ -47,7 +47,7 @@ class Seat(TemplateView):
             'seat': seatStr,
             'message': message,
         }
-        return render(request, 'practice/seat.html', context)
+        return render(request, 'practice/lists/seat.html', context)
 
 
 seatView = Seat.as_view()

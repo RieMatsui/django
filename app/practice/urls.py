@@ -7,9 +7,9 @@ from .views import dict
 
 urlpatterns = [
     path("", index.Index.as_view(), name="index"),
-    path("list", list.List.as_view(), name="list"),
-    path('seat', seat.Seat.as_view(), name='seat'),
+    path("lists", list.List.as_view(), name="lists.index"),
+    path('lists/seat', seat.Seat.as_view(), name='lists.seat'),
     path("tuple", tuple.Tuple.as_view(), name="tuple"),
-    path("dict", dict.Dict.as_view(), name="dict"),
-    path("dict/price_check", dict.PriceCheck.as_view(), name="price_check"),
+    path("dict", dict.Dict.as_view(), name="dict.index"),
+    path("dict/price_check", dict.PriceCheck.as_view(), name="dict.price_check"),
 ]

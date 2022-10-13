@@ -4,7 +4,7 @@ from django.shortcuts import render
 
 class List(TemplateView):
     # テンプレートファイル連携
-    template_name = 'practice/list.html'
+    template_name = 'practice/lists/index.html'
 
     print('*' * 5 + '練習16' + '*' * 5)
     list_1 = [1, 20, 4, 50, 2, 1, 2]
