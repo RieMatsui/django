@@ -6,11 +6,26 @@
   <component name="ChangeListManager">
     <list default="true" id="5390621b-eeb3-48bb-bc76-5643d3ada9fd" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/practice/templates/practice/lists/seat.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/practice/templates/practice/lists/seat.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/practice/templates/practice/set.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/practice/templates/practice/sets/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/practice/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/practice/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/practice/views/list.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/practice/views/list.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/practice/views/seat.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/practice/views/seat.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/config/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/config/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/customerCsv/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/customer_csv/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/customerCsv/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/customer_csv/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/customerCsv/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/customer_csv/apps.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/customerCsv/customer_master.csv" beforeDir="false" afterPath="$PROJECT_DIR$/app/customer_csv/customer_master.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/customerCsv/file/customer_master.csv" beforeDir="false" afterPath="$PROJECT_DIR$/app/customer_csv/file/customer_master.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/customerCsv/file/item_master.csv" beforeDir="false" afterPath="$PROJECT_DIR$/app/customer_csv/file/item_master.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/customerCsv/file/transaction_1.csv" beforeDir="false" afterPath="$PROJECT_DIR$/app/customer_csv/file/transaction_1.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/customerCsv/file/transaction_2.csv" beforeDir="false" afterPath="$PROJECT_DIR$/app/customer_csv/file/transaction_2.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/customerCsv/file/transaction_detail_1.csv" beforeDir="false" afterPath="$PROJECT_DIR$/app/customer_csv/file/transaction_detail_1.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/customerCsv/file/transaction_detail_2.csv" beforeDir="false" afterPath="$PROJECT_DIR$/app/customer_csv/file/transaction_detail_2.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/customerCsv/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/customer_csv/migrations/0001_initial.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/customerCsv/migrations/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/customer_csv/migrations/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/customerCsv/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/customer_csv/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/customerCsv/templates/customerCsv/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/customer_csv/templates/customer_csv/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/customerCsv/templates/customerCsv/sale_data.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/customer_csv/templates/customer_csv/sale_data.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/customerCsv/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/customer_csv/tests.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/customerCsv/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/customer_csv/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/customerCsv/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/customer_csv/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,6 +34,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2G4kuXcaq8WdQkuxVzTHcprm2Ho" />
   <component name="ProjectViewState">

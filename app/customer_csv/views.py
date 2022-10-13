@@ -8,62 +8,62 @@ from django.http import HttpResponse
 
 
 def index(request):
-    filePath = os.path.dirname(os.path.dirname(os.path.abspath(__file__))) + '/customerCsv/file/customer_master.csv'
+    filePath = os.path.dirname(os.path.dirname(os.path.abspath(__file__))) + '/customer_csv/file/customer_master.csv'
     df = pd.read_csv(filePath)
     data_num = len(df)
     context = {
         'df': df,
         'data_num': data_num,
     }
-    return render(request, 'customerCsv/index.html', context)
+    return render(request, 'customer_csv/index.html', context)
 
 
-def getCustomerData():
-    filePath = os.path.dirname(os.path.dirname(os.path.abspath(__file__))) + '/customerCsv/file/customer_master.csv'
+def get_customer_data():
+    filePath = os.path.dirname(os.path.dirname(os.path.abspath(__file__))) + '/customer_csv/file/customer_master.csv'
     df = pd.read_csv(filePath)
     return df
 
 
-def itemMaster(request):
+def item_master(request):
+    df = get_customer_data()
     data_num = len(df)
     context = {
         'df': df,
         'data_num': data_num,
     }
-    return render(request, 'customerCsv/index.html', context)
+    return render(request, 'customer_csv/index.html', context)
 
 
-def getItemData():
-    filePath = os.path.dirname(os.path.dirname(os.path.abspath(__file__))) + '/customerCsv/file/item_master.csv'
+def get_item_data():
+    filePath = os.path.dirname(os.path.dirname(os.path.abspath(__file__))) + '/customer_csv/file/item_master.csv'
     df = pd.read_csv(filePath)
     return df
 
 
-def getTransactionData():
-    transaction_1 = os.path.dirname(os.path.dirname(os.path.abspath(__file__))) + '/customerCsv/file/transaction_1.csv'
-    transaction_2 = os.path.dirname(os.path.dirname(os.path.abspath(__file__))) + '/customerCsv/file/transaction_2.csv'
+def get_transaction_data():
+    transaction_1 = os.path.dirname(os.path.dirname(os.path.abspath(__file__))) + '/customer_csv/file/transaction_1.csv'
+    transaction_2 = os.path.dirname(os.path.dirname(os.path.abspath(__file__))) + '/customer_csv/file/transaction_2.csv'
     df_transaction_1 = pd.read_csv(transaction_1)
     df_transaction_2 = pd.read_csv(transaction_2)
     # データをユニオンする
-    transaction = pd.concat([df_transaction_1, df_transaction_2], ignore_index=True)
-    return transaction
+    return pd.concat([df_transaction_1, df_transaction_2], ignore_index=True)
 
 
 def transaction(request):
-    transaction = getDetailData()
+    transaction = get_detail_data()
     data_num = len(transaction)
     context = {
         'df': transaction,
         'data_num': data_num,
     }
-    return render(request, 'customerCsv/index.html', context)
+    return render(request, 'customer_csv/index.html', context)
 
 
-def getDetailData():
+def get_detail_data():
     transaction_detail_1 = os.path.dirname(
-        os.path.dirname(os.path.abspath(__file__))) + '/customerCsv/file/transaction_detail_1.csv'
+        os.path.dirname(os.path.abspath(__file__))) + '/customer_csv/file/transaction_detail_1.csv'
     transaction_detail_2 = os.path.dirname(
-        os.path.dirname(os.path.abspath(__file__))) + '/customerCsv/file/transaction_detail_2.csv'
+        os.path.dirname(os.path.abspath(__file__))) + '/customer_csv/file/transaction_detail_2.csv'
     df_detail_1 = pd.read_csv(transaction_detail_1)
     df_detail_2 = pd.read_csv(transaction_detail_2)
     # データをユニオンする
@@ -71,23 +71,23 @@ def getDetailData():
     return df_details
 
 
-def transactionDetail(request):
+def transaction_detail(request):
     #  トランザクションデータの詳細データを取得する
-    df_detail = getDetailData()
+    df_detail = get_detail_data()
     data_num = len(df_detail)
     context = {
         'df': df_detail,
         'data_num': data_num,
     }
-    return render(request, 'customerCsv/index.html', context)
+    return render(request, 'customer_csv/index.html', context)
 
 
-def saleData(request):
+def sale_data(request):
     # トランザクションデータを取得する
-    df_detail = getDetailData()
-    dt_transaction = getTransactionData()
-    dt_customer = getCustomerData()
-    dt_item = getItemData()
+    df_detail = get_detail_data()
+    dt_transaction = get_transaction_data()
+    dt_customer = get_customer_data()
+    dt_item = get_item_data()
     join_data = pd.merge(df_detail,
                          dt_transaction[["transaction_id", "payment_date", "customer_id"]],
                          on='transaction_id',
@@ -112,10 +112,13 @@ def saleData(request):
     # 月別集計データ
     monthly_sale = join_data.groupby('payment_month').sum()['price']
 
+    annual_sale = pd.pivot_table(join_data, index='item_name', columns='payment_month',
+                                 values=['price', 'quantity'], aggfunc='sum')
+
     # 欠損値があるかをチェックします
     sum_data = join_data.isnull().values.sum()
     message = ''
-    if (sum_data > 0):
+    if sum_data > 0:
         message = '欠損値があります。'
 
     # トータルを出力
@@ -130,7 +133,8 @@ def saleData(request):
         'message': message,
         'total': total,
         'monthly_sale': monthly_sale,
+        'annual_sale': annual_sale,
         'min_date': min_date,
         'max_date': max_date,
     }
-    return render(request, 'customerCsv/sale_data.html', context)
+    return render(request, 'customer_csv/sale_data.html', context)

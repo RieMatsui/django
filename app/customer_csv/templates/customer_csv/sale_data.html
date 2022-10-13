@@ -39,6 +39,42 @@
 </table>
 <br>
 
+<h2>年間商品別売上</h2>
+<br>
+<table border="1">
+
+    <tr>
+        <th colspan="7">price</th>
+        <th colspan="6">quantity</th>
+    </tr>
+    <tr>
+        <th colspan="1">payment_month</th>
+        {% for index, rows in monthly_sale.iteritems %}
+        <th>
+            {{ index }}
+        </th>
+        {% endfor %}
+        {% for index, rows in monthly_sale.iteritems %}
+        <th>
+            {{ index }}
+        </th>
+        {% endfor %}
+    </tr>
+    <tr>
+        <th colspan="1">item_name</th>
+        <th colspan="12"></th>
+    </tr>
+    {% for index, rows in annual_sale.iterrows %}
+    <tr>
+        <th>{{ index }}</th>
+        {% for row in rows %}
+        <td>{{ row }}</td>
+        {% endfor %}
+    </tr>
+    {% endfor %}
+</table>
+<br>
+
 
 <!-- 読み込んだCSVファイルをテーブル形式で表示 -->
 <p>結果: {{ data_num }}件 {{ message }}</p>

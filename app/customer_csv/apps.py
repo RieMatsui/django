@@ -1,6 +1,6 @@
 from django.apps import AppConfig
 
 
-class CustomercsvConfig(AppConfig):
+class CustomerCsvConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
-    name = 'customerCsv'
+    name = 'customer_csv'
