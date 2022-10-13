@@ -1,9 +1,12 @@
 from django.urls import path
-from . import views
+from .views import index
+from .views import list
+from .views import seat
+from .views import tuple
 
 urlpatterns = [
-    path("", views.Index.as_view(), name="index"),
-    path("list", views.List.as_view(), name="list"),
-    path("tuple", views.Tuple.as_view(), name="tuple"),
-    path('seat', views.Seat.as_view(), name='seat'),
-    ]
+    path("", index.Index.as_view(), name="index"),
+    path("list", list.List.as_view(), name="list"),
+    path('seat', seat.Seat.as_view(), name='seat'),
+    path("tuple", tuple.Tuple.as_view(), name="tuple"),
+]
