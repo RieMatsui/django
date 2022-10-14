@@ -5,12 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5390621b-eeb3-48bb-bc76-5643d3ada9fd" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/app/customer_csv/views/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/customer_csv/views/sale_data.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Pipfile" beforeDir="false" afterPath="$PROJECT_DIR$/app/Pipfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/config/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/customer_csv/templates/customer_csv/sale_data.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/customer_csv/templates/customer_csv/sale_data.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/customer_csv/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/customer_csv/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/customer_csv/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/customer_csv/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/customer_csv/views.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,12 +39,13 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "com.google.cloudcode.ide_session_index": "20221013_0001",
-    "last_opened_file_path": "/Users/rie/develop/django/app/customer_csv",
+    "last_opened_file_path": "/Users/rie/develop/django/app/customer_csv/views",
     "settings.editor.selected.configurable": "preferences.pluginManager"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/customer_csv/views" />
       <recent name="$PROJECT_DIR$/app/customer_csv" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -86,9 +86,9 @@
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/app/customer_csv/views.py</url>
-          <line>111</line>
-          <option name="timeStamp" value="3" />
+          <url>file://$PROJECT_DIR$/app/practice/urls.py</url>
+          <line>5</line>
+          <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

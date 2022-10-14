@@ -7,7 +7,7 @@ import os
 
 
 def index(request):
-    filePath = os.path.dirname(os.path.dirname(os.path.abspath(__file__))) + '/customer_csv/file/customer_master.csv'
+    filePath = os.path.dirname(os.path.dirname(os.path.abspath(__file__))) + '/file/customer_master.csv'
     df = pd.read_csv(filePath)
     data_num = len(df)
     context = {
@@ -18,7 +18,7 @@ def index(request):
 
 
 def get_customer_data():
-    filePath = os.path.dirname(os.path.dirname(os.path.abspath(__file__))) + '/customer_csv/file/customer_master.csv'
+    filePath = os.path.dirname(os.path.dirname(os.path.abspath(__file__))) + '/file/customer_master.csv'
     df = pd.read_csv(filePath)
     return df
 
@@ -34,14 +34,14 @@ def item_master(request):
 
 
 def get_item_data():
-    filePath = os.path.dirname(os.path.dirname(os.path.abspath(__file__))) + '/customer_csv/file/item_master.csv'
+    filePath = os.path.dirname(os.path.dirname(os.path.abspath(__file__))) + '/file/item_master.csv'
     df = pd.read_csv(filePath)
     return df
 
 
 def get_transaction_data():
-    transaction_1 = os.path.dirname(os.path.dirname(os.path.abspath(__file__))) + '/customer_csv/file/transaction_1.csv'
-    transaction_2 = os.path.dirname(os.path.dirname(os.path.abspath(__file__))) + '/customer_csv/file/transaction_2.csv'
+    transaction_1 = os.path.dirname(os.path.dirname(os.path.abspath(__file__))) + '/file/transaction_1.csv'
+    transaction_2 = os.path.dirname(os.path.dirname(os.path.abspath(__file__))) + '/file/transaction_2.csv'
     df_transaction_1 = pd.read_csv(transaction_1)
     df_transaction_2 = pd.read_csv(transaction_2)
     # データをユニオンする
@@ -60,9 +60,9 @@ def transaction(request):
 
 def get_detail_data():
     transaction_detail_1 = os.path.dirname(
-        os.path.dirname(os.path.abspath(__file__))) + '/customer_csv/file/transaction_detail_1.csv'
+        os.path.dirname(os.path.abspath(__file__))) + '/file/transaction_detail_1.csv'
     transaction_detail_2 = os.path.dirname(
-        os.path.dirname(os.path.abspath(__file__))) + '/customer_csv/file/transaction_detail_2.csv'
+        os.path.dirname(os.path.abspath(__file__))) + '/file/transaction_detail_2.csv'
     df_detail_1 = pd.read_csv(transaction_detail_1)
     df_detail_2 = pd.read_csv(transaction_detail_2)
     # データをユニオンする
