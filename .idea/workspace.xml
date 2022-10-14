@@ -5,14 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5390621b-eeb3-48bb-bc76-5643d3ada9fd" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/app/customer_csv/file/customer/customer.xlsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/customer_csv/file/customer/dump_data.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/customer_csv/file/customer/sale.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/customer_csv/templates/customer_csv/customer/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/customer_csv/views/customer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Pipfile" beforeDir="false" afterPath="$PROJECT_DIR$/app/Pipfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/customer_csv/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/customer_csv/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/practice/views/list.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/practice/views/list.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/practice/views/seat.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/practice/views/seat.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/practice/views/sets.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/practice/views/sets.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/practice/views/tuple.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/practice/views/tuple.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

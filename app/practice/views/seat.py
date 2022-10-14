@@ -39,7 +39,7 @@ class Seat(TemplateView):
                 seat.remove(delete_seat)
                 seatStr = ','.join(seat)
 
-        if len(seat) == 5:
+        if len(seat) is 5:
             message = '空席がありません'
 
         set_seat = set(seat)

@@ -77,7 +77,6 @@ class Tuple(TemplateView):
         return render(request, template_name, context)
 
     def post(self, request):
-
         template_name = 'practice/tuple.html'
 
         chose_from_two = ('A：漫画', 'B：アニメ', 'C：どちらでもない')
@@ -88,5 +87,6 @@ class Tuple(TemplateView):
             'answer': request.POST['answer'],
         }
         return render(request, template_name, context)
+
 
 tupleView = Tuple.as_view()
