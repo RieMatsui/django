@@ -7,18 +7,18 @@ import os
 
 
 def index(request):
-    filePath = os.path.dirname(os.path.dirname(os.path.abspath(__file__))) + '/file/customer_master.csv'
+    filePath = os.path.dirname(os.path.dirname(os.path.abspath(__file__))) + '/file/sale/customer_master.csv'
     df = pd.read_csv(filePath)
     data_num = len(df)
     context = {
         'df': df,
         'data_num': data_num,
     }
-    return render(request, 'customer_csv/index.html', context)
+    return render(request, 'customer_csv/sale/index.html', context)
 
 
 def get_customer_data():
-    filePath = os.path.dirname(os.path.dirname(os.path.abspath(__file__))) + '/file/customer_master.csv'
+    filePath = os.path.dirname(os.path.dirname(os.path.abspath(__file__))) + '/file/sale/customer_master.csv'
     df = pd.read_csv(filePath)
     return df
 
@@ -30,18 +30,18 @@ def item_master(request):
         'df': df,
         'data_num': data_num,
     }
-    return render(request, 'customer_csv/index.html', context)
+    return render(request, 'customer_csv/sale/index.html', context)
 
 
 def get_item_data():
-    filePath = os.path.dirname(os.path.dirname(os.path.abspath(__file__))) + '/file/item_master.csv'
+    filePath = os.path.dirname(os.path.dirname(os.path.abspath(__file__))) + '/file/sale/item_master.csv'
     df = pd.read_csv(filePath)
     return df
 
 
 def get_transaction_data():
-    transaction_1 = os.path.dirname(os.path.dirname(os.path.abspath(__file__))) + '/file/transaction_1.csv'
-    transaction_2 = os.path.dirname(os.path.dirname(os.path.abspath(__file__))) + '/file/transaction_2.csv'
+    transaction_1 = os.path.dirname(os.path.dirname(os.path.abspath(__file__))) + '/file/sale/transaction_1.csv'
+    transaction_2 = os.path.dirname(os.path.dirname(os.path.abspath(__file__))) + '/file/sale/transaction_2.csv'
     df_transaction_1 = pd.read_csv(transaction_1)
     df_transaction_2 = pd.read_csv(transaction_2)
     # データをユニオンする
@@ -55,14 +55,14 @@ def transaction(request):
         'df': transaction,
         'data_num': data_num,
     }
-    return render(request, 'customer_csv/index.html', context)
+    return render(request, 'customer_csv/sale/index.html', context)
 
 
 def get_detail_data():
     transaction_detail_1 = os.path.dirname(
-        os.path.dirname(os.path.abspath(__file__))) + '/file/transaction_detail_1.csv'
+        os.path.dirname(os.path.abspath(__file__))) + '/file/sale/transaction_detail_1.csv'
     transaction_detail_2 = os.path.dirname(
-        os.path.dirname(os.path.abspath(__file__))) + '/file/transaction_detail_2.csv'
+        os.path.dirname(os.path.abspath(__file__))) + '/file/sale/transaction_detail_2.csv'
     df_detail_1 = pd.read_csv(transaction_detail_1)
     df_detail_2 = pd.read_csv(transaction_detail_2)
     # データをユニオンする
@@ -78,7 +78,7 @@ def transaction_detail(request):
         'df': df_detail,
         'data_num': data_num,
     }
-    return render(request, 'customer_csv/index.html', context)
+    return render(request, 'customer_csv/sale/index.html', context)
 
 
 def sale_data(request):
@@ -128,7 +128,7 @@ def sale_data(request):
     plt.legend()
 
     plt.show()
-    fig.savefig('customer_csv/static/images/graph.png')
+    fig.savefig('customer_csv/static/images/sale/graph.png')
 
     # 欠損値があるかをチェックします
     sum_data = join_data.isnull().values.sum()
@@ -152,4 +152,4 @@ def sale_data(request):
         'min_date': min_date,
         'max_date': max_date,
     }
-    return render(request, 'customer_csv/sale_data.html', context)
+    return render(request, 'customer_csv/sale/sale_data.html', context)
