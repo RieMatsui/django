@@ -74,7 +74,9 @@
     {% endfor %}
 </table>
 <br>
-
+<h1>商品別売上</h1>
+{% load static %}
+<img src="{% static 'images/graph.png' %}" width="600px">
 
 <!-- 読み込んだCSVファイルをテーブル形式で表示 -->
 <p>結果: {{ data_num }}件 {{ message }}</p>

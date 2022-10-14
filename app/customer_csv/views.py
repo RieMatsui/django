@@ -1,10 +1,9 @@
 from django.shortcuts import render
 from pandas import pandas as pd
-import csv
+from matplotlib import pyplot as plt
+import japanize_matplotlib
+import pathlib
 import os
-import datetime
-
-from django.http import HttpResponse
 
 
 def index(request):
@@ -114,6 +113,22 @@ def sale_data(request):
 
     annual_sale = pd.pivot_table(join_data, index='item_name', columns='payment_month',
                                  values=['price', 'quantity'], aggfunc='sum')
+
+    # 商品別の売上推移可視化
+    graph_data = pd.pivot_table(join_data, index='payment_month', columns='item_name', values='price', aggfunc='sum')
+
+    fig = plt.figure(figsize=(10, 10), facecolor='lightblue')
+
+    plt.plot(list(graph_data.index), graph_data["PC-A"], label='PC-A')
+    plt.plot(list(graph_data.index), graph_data["PC-B"], label='PC-B')
+    plt.plot(list(graph_data.index), graph_data["PC-C"], label='PC-C')
+    plt.plot(list(graph_data.index), graph_data["PC-D"], label='PC-D')
+    plt.plot(list(graph_data.index), graph_data["PC-E"], label='PC-E')
+
+    plt.legend()
+
+    plt.show()
+    fig.savefig('customer_csv/static/images/graph.png')
 
     # 欠損値があるかをチェックします
     sum_data = join_data.isnull().values.sum()
