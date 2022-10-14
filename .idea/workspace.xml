@@ -5,17 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5390621b-eeb3-48bb-bc76-5643d3ada9fd" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/app/customer_csv/file/customer/customer.xlsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/customer_csv/file/customer/dump_data.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/customer_csv/file/customer/sale.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/customer_csv/templates/customer_csv/customer/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/customer_csv/views/customer.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/customer_csv/file/customer_master.csv" beforeDir="false" afterPath="$PROJECT_DIR$/app/customer_csv/file/sale/customer_master.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/customer_csv/file/item_master.csv" beforeDir="false" afterPath="$PROJECT_DIR$/app/customer_csv/file/sale/item_master.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/customer_csv/file/transaction_1.csv" beforeDir="false" afterPath="$PROJECT_DIR$/app/customer_csv/file/sale/transaction_1.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/customer_csv/file/transaction_2.csv" beforeDir="false" afterPath="$PROJECT_DIR$/app/customer_csv/file/sale/transaction_2.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/customer_csv/file/transaction_detail_1.csv" beforeDir="false" afterPath="$PROJECT_DIR$/app/customer_csv/file/sale/transaction_detail_1.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/customer_csv/file/transaction_detail_2.csv" beforeDir="false" afterPath="$PROJECT_DIR$/app/customer_csv/file/sale/transaction_detail_2.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/customer_csv/static/images/graph.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/customer_csv/static/images/sale/graph.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/customer_csv/templates/customer_csv/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/customer_csv/templates/customer_csv/sale/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/customer_csv/templates/customer_csv/sale_data.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/customer_csv/templates/customer_csv/sale/sale_data.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/customer_csv/views/sale_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/customer_csv/views/sale_data.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Pipfile" beforeDir="false" afterPath="$PROJECT_DIR$/app/Pipfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/customer_csv/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/customer_csv/urls.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,21 +42,23 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "com.google.cloudcode.ide_session_index": "20221013_0001",
-    "last_opened_file_path": "/Users/rie/develop/django/app/customer_csv/views",
+    "last_opened_file_path": "/Users/rie/develop/django/app/customer_csv/templates/customer_csv/customer",
     "settings.editor.selected.configurable": "preferences.pluginManager"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/customer_csv/templates/customer_csv/customer" />
+      <recent name="$PROJECT_DIR$/app/customer_csv/file/customer" />
       <recent name="$PROJECT_DIR$/app/customer_csv/views" />
       <recent name="$PROJECT_DIR$/app/customer_csv" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/customer_csv/file" />
       <recent name="$PROJECT_DIR$/app/customer_csv/static/images/sale" />
       <recent name="$PROJECT_DIR$/app/customer_csv/templates/customer_csv/sale" />
       <recent name="$PROJECT_DIR$/app/customer_csv/file/sale" />
       <recent name="$PROJECT_DIR$/app/customer_csv/static" />
-      <recent name="$PROJECT_DIR$/app/practice/templates/practice/list" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />

@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+<head>
+    <title>テストアプリ</title>
+</head>
+<body>
+
+<h2>売上データファイル</h2>
+<br>
+ 読み込んだCSVファイル、エクセルをテーブル形式で表示
+<p>結果: {{ sale_num }}件</p>
+<table border="1">
+    <tr>
+        <td>index</td>
+        {% for columns, item in sale.iteritems %}
+        <th>{{ columns }}</th>
+        {% endfor %}
+    </tr>
+    {% for index, rows in sale.iterrows %}
+    <tr>
+        <th>{{ index }}</th>
+        {% for row in rows %}
+        <td>{{ row }}</td>
+        {% endfor %}
+    </tr>
+    {% endfor %}
+</table>
+<h2>顧客台帳</h2>
+<p>結果: {{ customer_num }}件</p>
+<table border="1">
+    <tr>
+        <td>index</td>
+        {% for columns, item in customer.iteritems %}
+        <th>{{ columns }}</th>
+        {% endfor %}
+    </tr>
+    {% for index, rows in customer.iterrows %}
+    <tr>
+        <th>{{ index }}</th>
+        {% for row in rows %}
+        <td>{{ row }}</td>
+        {% endfor %}
+    </tr>
+    {% endfor %}
+</table>
+</body>
+</html>
