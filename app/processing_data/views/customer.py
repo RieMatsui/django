@@ -8,7 +8,7 @@ class Customer(TemplateView):
 
     def get(self, request):
         # テンプレートファイル連携
-        template_name = 'customer_csv/customer/index.html'
+        template_name = 'processing_data/customer/index.html'
         filePath = os.path.dirname(os.path.dirname(os.path.abspath(__file__))) + '/file/customer/sale.csv'
         sale = pd.read_csv(filePath)
         sale_num = len(sale)

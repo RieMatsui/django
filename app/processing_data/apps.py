@@ -1,6 +1,6 @@
 from django.apps import AppConfig
 
 
-class CustomerCsvConfig(AppConfig):
+class ProcessingDataConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
-    name = 'customer_csv'
+    name = 'processing_data'

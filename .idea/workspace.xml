@@ -5,10 +5,33 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5390621b-eeb3-48bb-bc76-5643d3ada9fd" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/app/practice/views/list.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/practice/views/list.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/practice/views/seat.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/practice/views/seat.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/practice/views/sets.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/practice/views/sets.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/practice/views/tuple.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/practice/views/tuple.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/config/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/config/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/customer_csv/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/processing_data/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/customer_csv/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/processing_data/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/customer_csv/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/processing_data/apps.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/customer_csv/customer_master.csv" beforeDir="false" afterPath="$PROJECT_DIR$/app/processing_data/customer_master.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/customer_csv/file/customer/customer.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/processing_data/file/customer/customer.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/customer_csv/file/customer/dump_data.csv" beforeDir="false" afterPath="$PROJECT_DIR$/app/processing_data/file/customer/dump_data.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/customer_csv/file/customer/sale.csv" beforeDir="false" afterPath="$PROJECT_DIR$/app/processing_data/file/customer/sale.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/customer_csv/file/sale/customer_master.csv" beforeDir="false" afterPath="$PROJECT_DIR$/app/processing_data/file/sale/customer_master.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/customer_csv/file/sale/item_master.csv" beforeDir="false" afterPath="$PROJECT_DIR$/app/processing_data/file/sale/item_master.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/customer_csv/file/sale/transaction_1.csv" beforeDir="false" afterPath="$PROJECT_DIR$/app/processing_data/file/sale/transaction_1.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/customer_csv/file/sale/transaction_2.csv" beforeDir="false" afterPath="$PROJECT_DIR$/app/processing_data/file/sale/transaction_2.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/customer_csv/file/sale/transaction_detail_1.csv" beforeDir="false" afterPath="$PROJECT_DIR$/app/processing_data/file/sale/transaction_detail_1.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/customer_csv/file/sale/transaction_detail_2.csv" beforeDir="false" afterPath="$PROJECT_DIR$/app/processing_data/file/sale/transaction_detail_2.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/customer_csv/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/processing_data/migrations/0001_initial.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/customer_csv/migrations/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/processing_data/migrations/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/customer_csv/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/processing_data/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/customer_csv/static/images/sale/graph.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/processing_data/static/images/sale/graph.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/customer_csv/templates/customer_csv/customer/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/processing_data/templates/processing_data/customer/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/customer_csv/templates/customer_csv/sale/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/processing_data/templates/processing_data/sale/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/customer_csv/templates/customer_csv/sale/sale_data.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/processing_data/templates/processing_data/sale/sale_data.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/customer_csv/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/processing_data/tests.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/customer_csv/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/processing_data/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/customer_csv/views/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/processing_data/views/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/customer_csv/views/customer.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/processing_data/views/customer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/customer_csv/views/sale_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/processing_data/views/sale_data.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

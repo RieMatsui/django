@@ -14,7 +14,7 @@ def index(request):
         'df': df,
         'data_num': data_num,
     }
-    return render(request, 'customer_csv/sale/index.html', context)
+    return render(request, 'processing_data/sale/index.html', context)
 
 
 def get_customer_data():
@@ -30,7 +30,7 @@ def item_master(request):
         'df': df,
         'data_num': data_num,
     }
-    return render(request, 'customer_csv/sale/index.html', context)
+    return render(request, 'processing_data/sale/index.html', context)
 
 
 def get_item_data():
@@ -55,7 +55,7 @@ def transaction(request):
         'df': transaction,
         'data_num': data_num,
     }
-    return render(request, 'customer_csv/sale/index.html', context)
+    return render(request, 'processing_data/sale/index.html', context)
 
 
 def get_detail_data():
@@ -78,7 +78,7 @@ def transaction_detail(request):
         'df': df_detail,
         'data_num': data_num,
     }
-    return render(request, 'customer_csv/sale/index.html', context)
+    return render(request, 'processing_data/sale/index.html', context)
 
 
 def sale_data(request):
@@ -128,7 +128,7 @@ def sale_data(request):
     plt.legend()
 
     plt.show()
-    fig.savefig('customer_csv/static/images/sale/graph.png')
+    fig.savefig('processing_data/static/images/sale/graph.png')
 
     # 欠損値があるかをチェックします
     sum_data = join_data.isnull().values.sum()
@@ -152,4 +152,4 @@ def sale_data(request):
         'min_date': min_date,
         'max_date': max_date,
     }
-    return render(request, 'customer_csv/sale/sale_data.html', context)
+    return render(request, 'processing_data/sale/sale_data.html', context)
