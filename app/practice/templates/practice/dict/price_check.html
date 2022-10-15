@@ -1,23 +1,17 @@
-<!DOCTYPE html>
-<html lang="ja" dir="ltr">
-    <head>
-        <meta charset="utf-8">
-        <title>Dictionary型の練習</title>
-    </head>
-    <body>
-        <form action="/practice/dict/price_check" method="post">
-            {% csrf_token %}
-            <p>商品価格を確認しよう！</p>
-            <div>
-                <label for="item_name"></label>
-                <input type="text" id="item_name" name="item_name" value="{{ item_name }}">
-            </div>
-            {% if item_price  %}
-            <div>
-                <p>{{ item_name }}は{{ item_price }}円です。</p>
-            </div>
-            {% endif %}
-            <input type="submit" value="確認する">
-        </form>
-    </body>
-</html>
+{% extends 'base.html' %}
+{% block content %}
+    <form action="/practice/dict/price_check" method="post">
+        {% csrf_token %}
+        <p>商品価格を確認しよう！</p>
+        <div>
+            <label for="item_name"></label>
+            <input type="text" id="item_name" name="item_name" value="{{ item_name }}">
+        </div>
+        {% if item_price  %}
+        <div>
+            <p>{{ item_name }}は{{ item_price }}円です。</p>
+        </div>
+        {% endif %}
+        <input type="submit" value="確認する">
+    </form>
+{% endblock %}

@@ -1,10 +1,5 @@
-<!DOCTYPE html>
-<html lang="ja" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-  </head>
-  <body>
+{% extends 'base.html' %}
+{% block content %}
     <h1>練習8</h1>
     <ul>
       <li>{{ num }}</li>
@@ -76,5 +71,4 @@
       <li>{{ str_format10 }}</li>
       <li>{{ str_format11 }}</li>
     </ul>
-  </body>
-</html>
+{% endblock %}

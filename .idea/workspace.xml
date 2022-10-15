@@ -6,9 +6,13 @@
   <component name="ChangeListManager">
     <list default="true" id="5390621b-eeb3-48bb-bc76-5643d3ada9fd" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/processing_data/templates/processing_data/sale/sale_data.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/processing_data/templates/processing_data/sale/sale_data.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/processing_data/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/processing_data/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/processing_data/views/sale_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/processing_data/views/sale.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/practice/templates/practice/dict/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/practice/templates/practice/dict/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/practice/templates/practice/dict/price_check.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/practice/templates/practice/dict/price_check.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/practice/templates/practice/func/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/practice/templates/practice/func/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/practice/templates/practice/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/practice/templates/practice/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/practice/templates/practice/lists/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/practice/templates/practice/lists/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/practice/templates/practice/lists/seat.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/practice/templates/practice/lists/seat.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/practice/templates/practice/tuple.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/practice/templates/practice/tuple.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,18 +44,18 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "com.google.cloudcode.ide_session_index": "20221015_0007",
-    "last_opened_file_path": "/Users/rie/develop/django/app/practice/templates/practice/while_practice",
+    "last_opened_file_path": "/Users/rie/develop/django/app/practice/templates",
     "run.code.analysis.last.selected.profile": "aDefault",
     "settings.editor.selected.configurable": "preferences.pluginManager"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/practice/templates" />
       <recent name="$PROJECT_DIR$/app/practice/templates/practice/while_practice" />
       <recent name="$PROJECT_DIR$/app/customer_csv/templates/customer_csv/customer" />
       <recent name="$PROJECT_DIR$/app/customer_csv/file/customer" />
       <recent name="$PROJECT_DIR$/app/customer_csv/views" />
-      <recent name="$PROJECT_DIR$/app/customer_csv" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/app/practice/templates/practice/func" />
