@@ -5,6 +5,8 @@ from .views import seat
 from .views import tuple
 from .views import dict
 from .views import sets
+from .views import while_practice
+from .views import func
 
 urlpatterns = [
     path("", index.Index.as_view(), name="index"),
@@ -13,5 +15,7 @@ urlpatterns = [
     path("tuple", tuple.Tuple.as_view(), name="tuple"),
     path("dict", dict.Dict.as_view(), name="dict.index"),
     path("dict/price_check", dict.PriceCheck.as_view(), name="dict.price_check"),
-    path("sets", sets.Index.as_view(), name="index")
+    path("sets", sets.Index.as_view(), name="index"),
+    path("while_practice", while_practice.Index.as_view(), name="while_practice.index"),
+    path("func", func.index, name="index")
 ]
