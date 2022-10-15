@@ -4,7 +4,7 @@ from matplotlib import pyplot
 import japanize_matplotlib
 import pathlib
 import os
-from app.processing_data.lib.file import read
+from processing_data.lib.file import read
 
 
 def index(request):

@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from pandas import pandas
 import os
-from app.processing_data.lib.file import read
+from processing_data.lib.file import read
 
 
 def index(request):

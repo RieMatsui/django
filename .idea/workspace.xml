@@ -39,18 +39,18 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "com.google.cloudcode.ide_session_index": "20221015_0007",
-    "last_opened_file_path": "/Users/rie/develop/django/app/practice/templates",
+    "last_opened_file_path": "/Users/rie/develop/django/app",
     "run.code.analysis.last.selected.profile": "aDefault",
     "settings.editor.selected.configurable": "preferences.pluginManager"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app" />
       <recent name="$PROJECT_DIR$/app/practice/templates" />
       <recent name="$PROJECT_DIR$/app/practice/templates/practice/while_practice" />
       <recent name="$PROJECT_DIR$/app/customer_csv/templates/customer_csv/customer" />
       <recent name="$PROJECT_DIR$/app/customer_csv/file/customer" />
-      <recent name="$PROJECT_DIR$/app/customer_csv/views" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/app/processing_data/lib" />
