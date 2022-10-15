@@ -5,11 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5390621b-eeb3-48bb-bc76-5643d3ada9fd" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/app/practice/templates/practice/func/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/practice/templates/practice/while_practice/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/processing_data/static/css/sale_per_product.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/processing_data/templates/base.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/processing_data/templates/processing_data/customer/sale_per_product.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/practice/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/practice/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/practice/views/seat.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/practice/views/seat.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/processing_data/templates/processing_data/customer/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/processing_data/templates/processing_data/customer/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/processing_data/templates/processing_data/sale/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/processing_data/templates/processing_data/sale/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/processing_data/templates/processing_data/sale/sale_data.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/processing_data/templates/processing_data/sale/sale_data.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/processing_data/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/processing_data/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/processing_data/views/customer.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/processing_data/views/customer.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,7 +44,7 @@
     "DefaultHtmlFileTemplate": "HTML File",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "com.google.cloudcode.ide_session_index": "20221015_0005",
+    "com.google.cloudcode.ide_session_index": "20221015_0007",
     "last_opened_file_path": "/Users/rie/develop/django/app/practice/templates/practice/while_practice",
     "run.code.analysis.last.selected.profile": "aDefault",
     "settings.editor.selected.configurable": "preferences.pluginManager"

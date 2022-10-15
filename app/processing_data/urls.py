@@ -10,5 +10,6 @@ urlpatterns = [
                   path('transaction', sale_data.transaction, name='transaction'),
                   path('transaction_detail', sale_data.transaction_detail, name='transaction_detail'),
                   path('sale_data', sale_data.sale_data, name='sale_data'),
-                  path('customer', customer.Customer.as_view(), name='index'),
+                  path('customer', customer.index, name='index'),
+                  path('customer/sale_per_product', customer.get_sale_per_product, name='sale_per_product'),
               ] + static(settings.STATIC_URL, document_root=settings.STATICFILES_DIRS)
