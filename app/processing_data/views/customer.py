@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from pandas import pandas
 import os
+from ..lib.file import read
 
 
 def index(request):
@@ -9,8 +10,7 @@ def index(request):
     sale_data = get_sale_data()
     sale = sale_data['sale']
 
-    filePath = os.path.dirname(os.path.dirname(os.path.abspath(__file__))) + '/file/customer/customer.xlsx'
-    customer = pandas.read_excel(filePath)
+    customer = read.csv_read('/data/customer/customer.xlsx')
     customer_num = len(customer)
 
     context = {
@@ -23,8 +23,7 @@ def index(request):
 
 
 def get_sale_data():
-    filePath = os.path.dirname(os.path.dirname(os.path.abspath(__file__))) + '/file/customer/sale.csv'
-    sale = pandas.read_csv(filePath)
+    sale = read.csv_read('/file/customer/sale.csv')
     sale['purchase_date'] = pandas.to_datetime(sale['purchase_date'])
     sale['purchase_month'] = sale['purchase_date'].dt.strftime("%Y%m")
     sale_num = len(sale)

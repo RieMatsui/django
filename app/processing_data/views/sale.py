@@ -4,11 +4,11 @@ from matplotlib import pyplot
 import japanize_matplotlib
 import pathlib
 import os
+from ..lib.file import read
 
 
 def index(request):
-    filePath = os.path.dirname(os.path.dirname(os.path.abspath(__file__))) + '/file/sale/customer_master.csv'
-    df = pandas.read_csv(filePath)
+    df = read.csv_read('/data/sale/customer_master.csv')
     data_num = len(df)
     context = {
         'df': df,
@@ -18,9 +18,7 @@ def index(request):
 
 
 def get_customer_data():
-    filePath = os.path.dirname(os.path.dirname(os.path.abspath(__file__))) + '/file/sale/customer_master.csv'
-    df = pandas.read_csv(filePath)
-    return df
+    return read.csv_read('/data/sale/customer_master.csv')
 
 
 def item_master(request):
@@ -34,18 +32,13 @@ def item_master(request):
 
 
 def get_item_data():
-    filePath = os.path.dirname(os.path.dirname(os.path.abspath(__file__))) + '/file/sale/item_master.csv'
-    df = pandas.read_csv(filePath)
-    return df
-
+    return read.csv_read('data/sale/item_master.csv');
 
 def get_transaction_data():
-    transaction_1 = os.path.dirname(os.path.dirname(os.path.abspath(__file__))) + '/file/sale/transaction_1.csv'
-    transaction_2 = os.path.dirname(os.path.dirname(os.path.abspath(__file__))) + '/file/sale/transaction_2.csv'
-    df_transaction_1 = pandas.read_csv(transaction_1)
-    df_transaction_2 = pandas.read_csv(transaction_2)
+    transaction_1 = read.csv_read('data/sale/transaction_1.csv')
+    transaction_2 = read.csv_read('data/sale/transaction_2.csv')
     # データをユニオンする
-    return pandas.concat([df_transaction_1, df_transaction_2], ignore_index=True)
+    return pandas.concat([transaction_1, transaction_2], ignore_index=True)
 
 
 def transaction(request):
@@ -59,14 +52,10 @@ def transaction(request):
 
 
 def get_detail_data():
-    transaction_detail_1 = os.path.dirname(
-        os.path.dirname(os.path.abspath(__file__))) + '/file/sale/transaction_detail_1.csv'
-    transaction_detail_2 = os.path.dirname(
-        os.path.dirname(os.path.abspath(__file__))) + '/file/sale/transaction_detail_2.csv'
-    df_detail_1 = pandas.read_csv(transaction_detail_1)
-    df_detail_2 = pandas.read_csv(transaction_detail_2)
+    transaction_detail_1 = read.csv_read('data/sale/transaction_detail_1.csv')
+    transaction_detail_2 = read.csv_read('data/sale/transaction_detail_2.csv')
     # データをユニオンする
-    df_details = pandas.concat([df_detail_1, df_detail_2], ignore_index=True)
+    df_details = pandas.concat([transaction_detail_1, transaction_detail_2], ignore_index=True)
     return df_details
 
 
