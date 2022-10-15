@@ -2,7 +2,7 @@ from django.conf import settings
 from django.conf.urls.static import static
 from .views import sale
 from .views import customer
-from django.urls import include, path
+from django.urls import path
 
 urlpatterns = [
                   path('sale', sale.index, name='index'),

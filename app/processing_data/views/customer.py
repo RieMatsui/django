@@ -1,7 +1,7 @@
-from django.views.generic import TemplateView
 from django.shortcuts import render
-from pandas import pandas as pd
+from pandas import pandas
 import os
+
 
 def index(request):
     # テンプレートファイル連携
@@ -10,7 +10,7 @@ def index(request):
     sale = sale_data['sale']
 
     filePath = os.path.dirname(os.path.dirname(os.path.abspath(__file__))) + '/file/customer/customer.xlsx'
-    customer = pd.read_excel(filePath)
+    customer = pandas.read_excel(filePath)
     customer_num = len(customer)
 
     context = {
@@ -24,8 +24,8 @@ def index(request):
 
 def get_sale_data():
     filePath = os.path.dirname(os.path.dirname(os.path.abspath(__file__))) + '/file/customer/sale.csv'
-    sale = pd.read_csv(filePath)
-    sale['purchase_date'] = pd.to_datetime(sale['purchase_date'])
+    sale = pandas.read_csv(filePath)
+    sale['purchase_date'] = pandas.to_datetime(sale['purchase_date'])
     sale['purchase_month'] = sale['purchase_date'].dt.strftime("%Y%m")
     sale_num = len(sale)
     return {'sale': sale, 'sale_num': sale_num}

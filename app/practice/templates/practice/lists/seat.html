@@ -2,17 +2,17 @@
 {% block content %}
   <form action="/practice/lists/seat" method="post">
     {% csrf_token %}
-    <div>
+    <div class="form-group">
       <label for="input_seat">入力してください</label>
-      <input type="text" id="input_seat" name="input_seat" value="{{ input_seat }}">
+      <input class="form-control" type="text" id="input_seat" name="input_seat" value="{{ input_seat }}">
     </div>
-    <div>
+    <div class="form-group">
       <label for="delete_seat">削除する場合対象の文字を入力してください</label>
-      <input type="text" id="delete_seat" name="delete_seat" value="{{ delete_seat }}">
+      <input class="form-control" type="text" id="delete_seat" name="delete_seat" value="{{ delete_seat }}">
     </div>
-    <div>
+    <div class="form-group">
       <label for="seat">結果</label>
-      <input type="text" id="seat" name="seat" value="{{ seat }}" readonly>
+      <input class="form-control" type="text" id="seat" name="seat" value="{{ seat }}" readonly>
     </div>
     <div>
       <p>{{ message }}</p>
@@ -20,6 +20,6 @@
       <p>ユニークな値は{{ set_seat }}です</p>
       {% endif %}
     </div>
-    <input type="submit" value="送信する">
+    <input class="btn btn-secondary" type="submit" value="送信する">
   </form>
 {% endblock %}

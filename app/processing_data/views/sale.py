@@ -1,6 +1,6 @@
 from django.shortcuts import render
-from pandas import pandas as pd
-from matplotlib import pyplot as plt
+from pandas import pandas
+from matplotlib import pyplot
 import japanize_matplotlib
 import pathlib
 import os
@@ -8,7 +8,7 @@ import os
 
 def index(request):
     filePath = os.path.dirname(os.path.dirname(os.path.abspath(__file__))) + '/file/sale/customer_master.csv'
-    df = pd.read_csv(filePath)
+    df = pandas.read_csv(filePath)
     data_num = len(df)
     context = {
         'df': df,
@@ -19,7 +19,7 @@ def index(request):
 
 def get_customer_data():
     filePath = os.path.dirname(os.path.dirname(os.path.abspath(__file__))) + '/file/sale/customer_master.csv'
-    df = pd.read_csv(filePath)
+    df = pandas.read_csv(filePath)
     return df
 
 
@@ -35,17 +35,17 @@ def item_master(request):
 
 def get_item_data():
     filePath = os.path.dirname(os.path.dirname(os.path.abspath(__file__))) + '/file/sale/item_master.csv'
-    df = pd.read_csv(filePath)
+    df = pandas.read_csv(filePath)
     return df
 
 
 def get_transaction_data():
     transaction_1 = os.path.dirname(os.path.dirname(os.path.abspath(__file__))) + '/file/sale/transaction_1.csv'
     transaction_2 = os.path.dirname(os.path.dirname(os.path.abspath(__file__))) + '/file/sale/transaction_2.csv'
-    df_transaction_1 = pd.read_csv(transaction_1)
-    df_transaction_2 = pd.read_csv(transaction_2)
+    df_transaction_1 = pandas.read_csv(transaction_1)
+    df_transaction_2 = pandas.read_csv(transaction_2)
     # データをユニオンする
-    return pd.concat([df_transaction_1, df_transaction_2], ignore_index=True)
+    return pandas.concat([df_transaction_1, df_transaction_2], ignore_index=True)
 
 
 def transaction(request):
@@ -63,10 +63,10 @@ def get_detail_data():
         os.path.dirname(os.path.abspath(__file__))) + '/file/sale/transaction_detail_1.csv'
     transaction_detail_2 = os.path.dirname(
         os.path.dirname(os.path.abspath(__file__))) + '/file/sale/transaction_detail_2.csv'
-    df_detail_1 = pd.read_csv(transaction_detail_1)
-    df_detail_2 = pd.read_csv(transaction_detail_2)
+    df_detail_1 = pandas.read_csv(transaction_detail_1)
+    df_detail_2 = pandas.read_csv(transaction_detail_2)
     # データをユニオンする
-    df_details = pd.concat([df_detail_1, df_detail_2], ignore_index=True)
+    df_details = pandas.concat([df_detail_1, df_detail_2], ignore_index=True)
     return df_details
 
 
@@ -87,23 +87,23 @@ def sale_data(request):
     dt_transaction = get_transaction_data()
     dt_customer = get_customer_data()
     dt_item = get_item_data()
-    join_data = pd.merge(df_detail,
-                         dt_transaction[["transaction_id", "payment_date", "customer_id"]],
-                         on='transaction_id',
-                         how='left')
+    join_data = pandas.merge(df_detail,
+                             dt_transaction[["transaction_id", "payment_date", "customer_id"]],
+                             on='transaction_id',
+                             how='left')
 
-    join_data = pd.merge(join_data,
-                         dt_customer,
-                         on='customer_id',
-                         how='left')
+    join_data = pandas.merge(join_data,
+                             dt_customer,
+                             on='customer_id',
+                             how='left')
 
-    join_data = pd.merge(join_data,
-                         dt_item,
-                         on='item_id',
-                         how='left')
+    join_data = pandas.merge(join_data,
+                             dt_item,
+                             on='item_id',
+                             how='left')
 
     join_data['price'] = join_data['quantity'] * join_data['item_price']
-    join_data['payment_date'] = pd.to_datetime(join_data['payment_date'])
+    join_data['payment_date'] = pandas.to_datetime(join_data['payment_date'])
     join_data['payment_month'] = join_data['payment_date'].dt.strftime('%Y年%m月')
     join_data['payment_day'] = join_data['payment_date'].dt.strftime('%Y年%m月%d日')
     data_num = len(join_data)
@@ -111,23 +111,24 @@ def sale_data(request):
     # 月別集計データ
     monthly_sale = join_data.groupby('payment_month').sum()['price']
 
-    annual_sale = pd.pivot_table(join_data, index='item_name', columns='payment_month',
-                                 values=['price', 'quantity'], aggfunc='sum')
+    annual_sale = pandas.pivot_table(join_data, index='item_name', columns='payment_month',
+                                     values=['price', 'quantity'], aggfunc='sum')
 
     # 商品別の売上推移可視化
-    graph_data = pd.pivot_table(join_data, index='payment_month', columns='item_name', values='price', aggfunc='sum')
+    graph_data = pandas.pivot_table(join_data, index='payment_month', columns='item_name', values='price',
+                                    aggfunc='sum')
 
-    fig = plt.figure(figsize=(10, 10), facecolor='lightblue')
+    fig = pyplot.figure(figsize=(10, 10), facecolor='lightblue')
 
-    plt.plot(list(graph_data.index), graph_data["PC-A"], label='PC-A')
-    plt.plot(list(graph_data.index), graph_data["PC-B"], label='PC-B')
-    plt.plot(list(graph_data.index), graph_data["PC-C"], label='PC-C')
-    plt.plot(list(graph_data.index), graph_data["PC-D"], label='PC-D')
-    plt.plot(list(graph_data.index), graph_data["PC-E"], label='PC-E')
+    pyplot.plot(list(graph_data.index), graph_data["PC-A"], label='PC-A')
+    pyplot.plot(list(graph_data.index), graph_data["PC-B"], label='PC-B')
+    pyplot.plot(list(graph_data.index), graph_data["PC-C"], label='PC-C')
+    pyplot.plot(list(graph_data.index), graph_data["PC-D"], label='PC-D')
+    pyplot.plot(list(graph_data.index), graph_data["PC-E"], label='PC-E')
 
-    plt.legend()
+    pyplot.legend()
 
-    plt.show()
+    pyplot.show()
     fig.savefig('processing_data/static/images/sale/graph.png')
 
     # 欠損値があるかをチェックします
