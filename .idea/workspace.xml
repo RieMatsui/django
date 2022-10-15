@@ -5,18 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5390621b-eeb3-48bb-bc76-5643d3ada9fd" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/app/processing_data/lib/file/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/processing_data/lib/file/read.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/processing_data/file/customer/customer.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/processing_data/lib/data/customer/customer.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/processing_data/file/customer/dump_data.csv" beforeDir="false" afterPath="$PROJECT_DIR$/app/processing_data/lib/data/customer/dump_data.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/processing_data/file/customer/sale.csv" beforeDir="false" afterPath="$PROJECT_DIR$/app/processing_data/lib/data/customer/sale.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/processing_data/file/sale/customer_master.csv" beforeDir="false" afterPath="$PROJECT_DIR$/app/processing_data/lib/data/sale/customer_master.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/processing_data/file/sale/item_master.csv" beforeDir="false" afterPath="$PROJECT_DIR$/app/processing_data/lib/data/sale/item_master.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/processing_data/file/sale/transaction_1.csv" beforeDir="false" afterPath="$PROJECT_DIR$/app/processing_data/lib/data/sale/transaction_1.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/processing_data/file/sale/transaction_2.csv" beforeDir="false" afterPath="$PROJECT_DIR$/app/processing_data/lib/data/sale/transaction_2.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/processing_data/file/sale/transaction_detail_1.csv" beforeDir="false" afterPath="$PROJECT_DIR$/app/processing_data/lib/data/sale/transaction_detail_1.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/processing_data/file/sale/transaction_detail_2.csv" beforeDir="false" afterPath="$PROJECT_DIR$/app/processing_data/lib/data/sale/transaction_detail_2.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/processing_data/views/customer.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/processing_data/views/customer.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/processing_data/views/sale.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/processing_data/views/sale.py" afterDir="false" />
     </list>
