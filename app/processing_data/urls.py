@@ -2,17 +2,17 @@ from django.conf import settings
 from django.conf.urls.static import static
 from django.urls import path
 
-from .views import sale
-from .views import customer
+from .views import ec
+from .views import shop
 
 urlpatterns = [
-                  path('sale', sale.index, name='index'),
-                  path('sale/item_master', sale.item_master, name='item_master'),
-                  path('sale/transaction', sale.transaction, name='transaction'),
-                  path('sale/transaction_detail', sale.transaction_detail, name='transaction_detail'),
-                  path('sale/sale_data', sale.sale_data, name='sale_data'),
-                  path('customer', customer.index, name='index'),
-                  path('customer/sale_per_product', customer.get_sale_per_product, name='sale_per_product'),
-                  path('customer/sale_per_price', customer.get_sale_per_price, name='sale_per_price'),
-                  path('customer/monthly_user_num', customer.get_monthly_user_num, name='monthly_user_num'),
+                  path('ec', ec.index, name='index'),
+                  path('ec/item_master', ec.item_master, name='item_master'),
+                  path('ec/transaction', ec.transaction, name='transaction'),
+                  path('ec/transaction_detail', ec.transaction_detail, name='transaction_detail'),
+                  path('ec/sale_data', ec.sale_data, name='sale_data'),
+                  path('shop', shop.index, name='index'),
+                  path('shop/sale_per_product', shop.get_sale_per_product, name='sale_per_product'),
+                  path('shop/sale_per_price', shop.get_sale_per_price, name='sale_per_price'),
+                  path('shop/monthly_user_num', shop.get_monthly_user_num, name='monthly_user_num'),
               ] + static(settings.STATIC_URL, document_root=settings.STATICFILES_DIRS)

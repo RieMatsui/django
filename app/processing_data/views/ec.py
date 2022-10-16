@@ -10,17 +10,17 @@ from ..lib.file import read
 
 
 def index(request):
-    df = read.csv_read('/data/sale/customer_master.csv')
+    df = read.csv_read('/data/ec/customer_master.csv')
     data_num = len(df)
     context = {
         'df': df,
         'data_num': data_num,
     }
-    return render(request, 'processing_data/sale/index.html', context)
+    return render(request, 'processing_data/ec/index.html', context)
 
 
 def get_customer_data():
-    return read.csv_read('/data/sale/customer_master.csv')
+    return read.csv_read('/data/ec/customer_master.csv')
 
 
 def item_master(request):
@@ -30,16 +30,16 @@ def item_master(request):
         'df': df,
         'data_num': data_num,
     }
-    return render(request, 'processing_data/sale/index.html', context)
+    return render(request, 'processing_data/ec/index.html', context)
 
 
 def get_item_data():
-    return read.csv_read('data/sale/item_master.csv')
+    return read.csv_read('data/ec/item_master.csv')
 
 
 def get_transaction_data():
-    transaction_1 = read.csv_read('data/sale/transaction_1.csv')
-    transaction_2 = read.csv_read('data/sale/transaction_2.csv')
+    transaction_1 = read.csv_read('data/ec/transaction_1.csv')
+    transaction_2 = read.csv_read('data/ec/transaction_2.csv')
     # データをユニオンする
     return pandas.concat([transaction_1, transaction_2], ignore_index=True)
 
@@ -51,12 +51,12 @@ def transaction(request):
         'df': t_detail,
         'data_num': data_num,
     }
-    return render(request, 'processing_data/sale/index.html', context)
+    return render(request, 'processing_data/ec/index.html', context)
 
 
 def get_detail_data():
-    transaction_detail_1 = read.csv_read('data/sale/transaction_detail_1.csv')
-    transaction_detail_2 = read.csv_read('data/sale/transaction_detail_2.csv')
+    transaction_detail_1 = read.csv_read('data/ec/transaction_detail_1.csv')
+    transaction_detail_2 = read.csv_read('data/ec/transaction_detail_2.csv')
     # データをユニオンする
     df_details = pandas.concat([transaction_detail_1, transaction_detail_2], ignore_index=True)
     return df_details
@@ -70,7 +70,7 @@ def transaction_detail(request):
         'df': df_detail,
         'data_num': data_num,
     }
-    return render(request, 'processing_data/sale/index.html', context)
+    return render(request, 'processing_data/ec/index.html', context)
 
 
 def sale_data(request):
@@ -121,7 +121,7 @@ def sale_data(request):
     pyplot.legend()
 
     pyplot.show()
-    fig.savefig('processing_data/static/images/sale/graph.png')
+    fig.savefig('processing_data/static/images/ec/graph.png')
 
     # 欠損値があるかをチェックします
     sum_data = join_data.isnull().values.sum()
@@ -145,4 +145,4 @@ def sale_data(request):
         'min_date': min_date,
         'max_date': max_date,
     }
-    return render(request, 'processing_data/sale/sale_data.html', context)
+    return render(request, 'processing_data/ec/sale_data.html', context)

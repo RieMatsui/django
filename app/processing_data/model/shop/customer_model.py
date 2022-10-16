@@ -1,7 +1,7 @@
 import pandas
 import pandas as pd
 
-from ..lib.file import read
+from processing_data.lib.file import read
 
 
 class CustomerModel(object):

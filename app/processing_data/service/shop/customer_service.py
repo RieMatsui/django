@@ -1,4 +1,4 @@
-from ..model.customer_model import CustomerModel
+from processing_data.model.shop.customer_model import CustomerModel
 
 
 class CustomerService(object):
