@@ -1,4 +1,3 @@
-
 import japanize_matplotlib
 import pathlib
 

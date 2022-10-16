@@ -5,32 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5390621b-eeb3-48bb-bc76-5643d3ada9fd" name="Changes" comment="Changes">
-      <change afterPath="$PROJECT_DIR$/app/processing_data/service/shop/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/django.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/django.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/processing_data/lib/data/customer/customer.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/processing_data/lib/data/shop/customer.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/processing_data/lib/data/customer/dump_data.csv" beforeDir="false" afterPath="$PROJECT_DIR$/app/processing_data/lib/data/shop/dump_data.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/processing_data/lib/data/customer/sale.csv" beforeDir="false" afterPath="$PROJECT_DIR$/app/processing_data/lib/data/shop/sale.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/processing_data/lib/data/sale/customer_master.csv" beforeDir="false" afterPath="$PROJECT_DIR$/app/processing_data/lib/data/ec/customer_master.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/processing_data/lib/data/sale/item_master.csv" beforeDir="false" afterPath="$PROJECT_DIR$/app/processing_data/lib/data/ec/item_master.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/processing_data/lib/data/sale/transaction_1.csv" beforeDir="false" afterPath="$PROJECT_DIR$/app/processing_data/lib/data/ec/transaction_1.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/processing_data/lib/data/sale/transaction_2.csv" beforeDir="false" afterPath="$PROJECT_DIR$/app/processing_data/lib/data/ec/transaction_2.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/processing_data/lib/data/sale/transaction_detail_1.csv" beforeDir="false" afterPath="$PROJECT_DIR$/app/processing_data/lib/data/ec/transaction_detail_1.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/processing_data/lib/data/sale/transaction_detail_2.csv" beforeDir="false" afterPath="$PROJECT_DIR$/app/processing_data/lib/data/ec/transaction_detail_2.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/processing_data/model/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/processing_data/model/customer_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/processing_data/model/shop/customer_model.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/processing_data/model/sale_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/processing_data/model/shop/sale_model.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/processing_data/service/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/processing_data/model/shop/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/processing_data/service/customer_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/processing_data/service/shop/customer_service.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/processing_data/service/sale_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/processing_data/service/shop/sale_service.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/processing_data/static/images/sale/graph.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/processing_data/static/images/ec/graph.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/processing_data/templates/processing_data/customer/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/processing_data/templates/processing_data/ec/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/processing_data/templates/processing_data/customer/monthly_user_num.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/processing_data/templates/processing_data/ec/monthly_user_num.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/processing_data/templates/processing_data/customer/sale_per_price.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/processing_data/templates/processing_data/ec/sale_per_price.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/processing_data/templates/processing_data/customer/sale_per_product.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/processing_data/templates/processing_data/ec/sale_per_product.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/processing_data/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/processing_data/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/processing_data/views/customer.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/processing_data/views/shop.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/processing_data/views/sale.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/processing_data/views/ec.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/processing_data/views/ec.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/processing_data/views/ec.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,7 +37,7 @@
     "DefaultHtmlFileTemplate": "HTML File",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "com.google.cloudcode.ide_session_index": "20221016_0003",
+    "com.google.cloudcode.ide_session_index": "20221017_0001",
     "last_opened_file_path": "/Users/rie/develop/django/app/processing_data/service",
     "run.code.analysis.last.selected.profile": "aDefault",
     "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PythonContentEntriesConfigurable"
