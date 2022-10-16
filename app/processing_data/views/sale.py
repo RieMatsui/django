@@ -1,11 +1,12 @@
-from django.shortcuts import render
-from pandas import pandas
-from matplotlib import pyplot
+
 import japanize_matplotlib
 import pathlib
-import os
-from processing_data.lib.file import read
 
+from django.shortcuts import render
+from matplotlib import pyplot
+from pandas import pandas
+
+from processing_data.lib.file import read
 
 def index(request):
     df = read.csv_read('/data/sale/customer_master.csv')

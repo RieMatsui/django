@@ -1,10 +1,16 @@
-from django.views.generic import TemplateView
 from django.shortcuts import render
+from django.views.generic import TemplateView
+
+from collections import defaultdict
 
 
 class Dict(TemplateView):
-    # 練習20
-    def get(self, request, *args, **kwargs):
+
+    def __main__(self):
+        self.main()
+
+    @staticmethod
+    def main():
         print('*' * 5 + '練習25' + '*' * 5)
         d = {'x': 10, 'y': 20}
         print(d)
@@ -73,10 +79,47 @@ class Dict(TemplateView):
         print(x)
         print(y)
 
+        ranking = {
+            "A": 100,
+            "B": 85,
+            "C":95,
+        }
+        print(ranking)
+        asc_ranking = sorted(ranking, key=ranking.get)
+        desc_ranking = sorted(ranking, key=ranking.get, reverse=True)
+        print(asc_ranking)
+        print(desc_ranking)
+
+        s = "siahciiesideyigeihusui"
+
+        d = {}
+        for c in s:
+            if c not in d:
+                d[c] = 0
+            d[c] += 1
+        print(d)
+
+        d = {}
+        for c in s:
+            d.setdefault(c, 0)
+            d[c] += 1
+        print(d)
+
+        d = defaultdict(int)
+        for c in s:
+            d[c] += 1
+        print(d)
+
+        print(d['f'])
+
+    # 練習20
+    def get(self, request, *args, **kwargs):
+        self.main()
         return render(request, 'practice/dict/index.html')
 
 
 class PriceCheck(TemplateView):
+
     # 練習20
     def get(self, request, *args, **kwargs):
         return render(request, 'practice/dict/price_check.html')

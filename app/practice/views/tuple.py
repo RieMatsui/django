@@ -3,66 +3,72 @@ from django.shortcuts import render
 
 
 class Tuple(TemplateView):
-    print('*' * 5 + '練習20' + '*' * 5)
-    t = (1, 2, 3, 4, 1, 2)
-    print(type(t))
-    print(t[0])
-    print(t[2:5])
-    print(t.index(1))
-    print(t.index(1, 1))
-    print(t.count(1))
-    print('*' * 16)
 
-    t = ([1, 2, 3], [4, 5, 6])
-    print(t[0][0])
-    t = 1, 2, 3
-    print(type(t))
-    t = 1,
-    print(type(t))
-    t = ()
-    print(type(t))
-    t = (1)
-    print(type(t))
-    t = (1,)
-    print(type(t))
+    def __main__(self):
+        self.main()
 
-    new_tuple = (1, 2, 3) + (4, 5, 6)
-    print(new_tuple)
-    new_tuple = (1,) + (4, 5, 6)
-    print(new_tuple)
+    @staticmethod
+    def main():
+        print('*' * 5 + '練習20' + '*' * 5)
+        t = (1, 2, 3, 4, 1, 2)
+        print(type(t))
+        print(t[0])
+        print(t[2:5])
+        print(t.index(1))
+        print(t.index(1, 1))
+        print(t.count(1))
+        print('*' * 16)
 
-    print('*' * 5 + '練習21' + '*' * 5)
+        t = ([1, 2, 3], [4, 5, 6])
+        print(t[0][0])
+        t = 1, 2, 3
+        print(type(t))
+        t = 1,
+        print(type(t))
+        t = ()
+        print(type(t))
+        t = (1)
+        print(type(t))
+        t = (1,)
+        print(type(t))
 
-    num_tuple = (10, 10)
-    print(num_tuple)
+        new_tuple = (1, 2, 3) + (4, 5, 6)
+        print(new_tuple)
+        new_tuple = (1,) + (4, 5, 6)
+        print(new_tuple)
 
-    x, y = num_tuple
-    print(x, y)
+        print('*' * 5 + '練習21' + '*' * 5)
 
-    x, y = 10, 20
-    print(x, y)
+        num_tuple = (10, 10)
+        print(num_tuple)
 
-    min, max = 0, 100
-    print(min, max)
+        x, y = num_tuple
+        print(x, y)
 
-    a, b, c, d, e, f = 'Mike', '1', '1', '1', 'e', 'f'
-    print(a, b, c, d, e, f)
-    a = 'Mike'
-    b = '1'
+        x, y = 10, 20
+        print(x, y)
 
-    print('*' * 16)
-    i = 10
-    j = 20
-    tmp = i
-    i = j
-    j = tmp
-    print(i, j)
+        min, max = 0, 100
+        print(min, max)
 
-    a = 100
-    b = 200
-    print(a, b)
-    a, b = b, a
-    print(a, b)
+        a, b, c, d, e, f = 'Mike', '1', '1', '1', 'e', 'f'
+        print(a, b, c, d, e, f)
+        a = 'Mike'
+        b = '1'
+
+        print('*' * 16)
+        i = 10
+        j = 20
+        tmp = i
+        i = j
+        j = tmp
+        print(i, j)
+
+        a = 100
+        b = 200
+        print(a, b)
+        a, b = b, a
+        print(a, b)
 
     def get(self, request, *args, **kwargs):
         # テンプレートファイル連携

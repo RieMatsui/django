@@ -1,40 +1,51 @@
+from django.shortcuts import render
 from django.views.generic import TemplateView
 
 
 class Index(TemplateView):
-    # テンプレートファイル連携
-    template_name = 'practice/sets/index.html'
 
-    print('*' * 5 + '練習28' + '*' * 5)
-    a = {1, 2, 3, 4, 5, 6}
-    b = {2, 3, 6, 7}
+    def __main__(self):
+        self.main()
 
-    print(a - b)
-    print(b - a)
+    @staticmethod
+    def main():
+        # テンプレートファイル連携
+        template_name = 'practice/sets/index.html'
 
-    # aにもありbにもあるもの
-    print(a & b)
+        print('*' * 5 + '練習28' + '*' * 5)
+        a = {1, 2, 3, 4, 5, 6}
+        b = {2, 3, 6, 7}
 
-    # aとbに含まれるもの（重複は除く）
-    print(a | b)
+        print(a - b)
+        print(b - a)
 
-    # aにもありbにもあるもの以外
-    print(a ^ b)
+        # aにもありbにもあるもの
+        print(a & b)
 
-    print('*' * 5 + '練習29' + '*' * 5)
+        # aとbに含まれるもの（重複は除く）
+        print(a | b)
 
-    # 集合の値の追加
-    s = {1, 2, 3, 4, 5}
-    s.add(6)
-    print(s)
+        # aにもありbにもあるもの以外
+        print(a ^ b)
 
-    # 集合の値の削除
-    s.remove(6)
-    print(s)
+        print('*' * 5 + '練習29' + '*' * 5)
 
-    s.clear()
-    print(s)
+        # 集合の値の追加
+        s = {1, 2, 3, 4, 5}
+        s.add(6)
+        print(s)
 
-    my_friends = {'A', 'C', 'D'}
-    A_friend = {'B', 'D', 'E', 'F'}
-    print(my_friends & A_friend)
+        # 集合の値の削除
+        s.remove(6)
+        print(s)
+
+        s.clear()
+        print(s)
+
+        my_friends = {'A', 'C', 'D'}
+        A_friend = {'B', 'D', 'E', 'F'}
+        print(my_friends & A_friend)
+
+    def get(self, request, *args, **kwargs):
+        self.main()
+        return render(request, 'practice/sets/index.html')

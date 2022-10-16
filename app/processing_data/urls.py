@@ -1,8 +1,9 @@
 from django.conf import settings
 from django.conf.urls.static import static
-from .views import sale
-from .views import customer
 from django.urls import path
+
+from processing_data.views import sale
+from processing_data.views import customer
 
 urlpatterns = [
                   path('sale', sale.index, name='index'),

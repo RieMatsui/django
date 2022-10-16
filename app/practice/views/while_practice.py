@@ -1,90 +1,71 @@
+from django.shortcuts import render
 from django.views.generic import TemplateView
 
 
 class Index(TemplateView):
-    # count = 0
-    # while count < 5:
-    #     print(count)
-    #     count += 1
-    # else:
-    #     print('count done')
-    #
-    # count_2 = 0
-    # while True:
-    #     if count_2 >= 5:
-    #         break
-    #     if count_2 == 2:
-    #         count_2 += 1
-    #         continue
-    #     print(count_2)
-    #     count_2 += 1
-    #
-    # i = 0
-    #
-    # some_list = [1, 2, 3, 4, 5]
-    # while i < len(some_list):
-    #     print(some_list[i])
-    #     i += 1
-    #
-    # for i in some_list:
-    #     print(i)
 
-    for s in 'abcde':
-        print(s)
+    def __main__(self):
+        self.main()
 
-    for word in ['My', 'name', 'is', 'mike']:
-        print(word)
+    @staticmethod
+    def main():
+        for s in 'abcde':
+            print(s)
 
-    for word in ['My', 'name', 'is', 'mike']:
-        if word == 'name':
-            break
-        print(word)
+        for word in ['My', 'name', 'is', 'mike']:
+            print(word)
 
-    for word in ['My', 'name', 'is', 'mike']:
-        if word == 'name':
-            continue
-        print(word)
+        for word in ['My', 'name', 'is', 'mike']:
+            if word == 'name':
+                break
+            print(word)
 
-    for fruit in ['apple', 'banana', 'orange']:
-        if fruit == 'banana':
-            print('stop eating')
-            break
-        print(fruit)
-    else:
-        print('I ate all!')
+        for word in ['My', 'name', 'is', 'mike']:
+            if word == 'name':
+                continue
+            print(word)
 
-    for i in range(10):
-        print(i)
+        for fruit in ['apple', 'banana', 'orange']:
+            if fruit == 'banana':
+                print('stop eating')
+                break
+            print(fruit)
+        else:
+            print('I ate all!')
 
-    for i in range(2, 10):
-        print(i)
+        for i in range(10):
+            print(i)
 
-    for i in range(2, 10, 3):
-        print(i)
+        for i in range(2, 10):
+            print(i)
 
-    for i in range(10):
-        print(str(i) + ':hello!')
+        for i in range(2, 10, 3):
+            print(i)
 
-    for _ in range(10):
-        print('hello!')
+        for i in range(10):
+            print(str(i) + ':hello!')
 
-    for i, fruit in enumerate(['apple', 'banana', 'orange']):
-        print(i, fruit)
+        for _ in range(10):
+            print('hello!')
 
-    days = ['Mon', 'Tue', 'Wed']
-    fruit = ['apple', 'banana', 'orange']
-    drinks = ['coffee', 'tea', 'beer']
+        for i, fruit in enumerate(['apple', 'banana', 'orange']):
+            print(i, fruit)
 
-    for day, fruit, drinks in zip(days, fruit, drinks):
-        print(day, fruit, drinks)
+        days = ['Mon', 'Tue', 'Wed']
+        fruit = ['apple', 'banana', 'orange']
+        drinks = ['coffee', 'tea', 'beer']
 
-    d = {'x': 100, 'y': 200}
+        for day, fruit, drinks in zip(days, fruit, drinks):
+            print(day, fruit, drinks)
 
-    for key, value in d.items():
-        print(key, ':', value)
+        d = {'x': 100, 'y': 200}
 
-    # テンプレートファイル連携
-    template_name = 'practice/while_practice/index.html'
+        for key, value in d.items():
+            print(key, ':', value)
+
+    def get(self, request, *args, **kwargs):
+        self.main()
+        return render(request, 'practice/while_practice/index.html')
 
 
 whilePracticeView = Index.as_view()
