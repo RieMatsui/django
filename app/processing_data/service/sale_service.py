@@ -16,4 +16,4 @@ class SaleService(object):
         return self.sale_model.get_sale_per_product()
 
     def get_sale_per_price(self):
-        return self.get_sale_per_price()
+        return self.sale_model.get_sale_per_price()
