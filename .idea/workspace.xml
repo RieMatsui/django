@@ -6,14 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="5390621b-eeb3-48bb-bc76-5643d3ada9fd" name="Changes" comment="Changes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Pipfile" beforeDir="false" afterPath="$PROJECT_DIR$/app/Pipfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/practice/views/dict.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/practice/views/dict.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/practice/views/list.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/practice/views/list.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/practice/views/sets.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/practice/views/sets.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/practice/views/tuple.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/practice/views/tuple.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/practice/views/while_practice.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/practice/views/while_practice.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/processing_data/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/processing_data/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/processing_data/views/sale.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/processing_data/views/sale.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/processing_data/lib/file/read.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/processing_data/lib/file/read.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/processing_data/templates/processing_data/customer/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/processing_data/templates/processing_data/customer/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/processing_data/views/customer.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/processing_data/views/customer.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,17 +34,17 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "com.google.cloudcode.ide_session_index": "20221016_0003",
-    "last_opened_file_path": "/Users/rie/develop/django/app",
-    "run.code.analysis.last.selected.profile": "aDefault",
-    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;com.google.cloudcode.ide_session_index&quot;: &quot;20221016_0003&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/rie/develop/django/app&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;aDefault&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/app" />

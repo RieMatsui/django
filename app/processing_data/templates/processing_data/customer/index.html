@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% block content %}
+<h1>売上・顧客データマスタ</h1>
 <h2>売上データファイル</h2>
 <br>
  読み込んだCSVファイル、エクセルをテーブル形式で表示
@@ -25,13 +26,15 @@
 </table>
 <h2>顧客台帳</h2>
 <p>結果: {{ customer_num }}件</p>
-<table border="1">
-    <tr>
-        <td>index</td>
-        {% for columns, item in customer.iteritems %}
-        <th>{{ columns }}</th>
-        {% endfor %}
-    </tr>
+<table class="table list-table table-striped">
+    <thead class="thead-dark">
+        <tr>
+            <th></th>
+            {% for columns, item in customer.iteritems %}
+            <th>{{ columns }}</th>
+            {% endfor %}
+        </tr>
+    </thead>
     {% for index, rows in customer.iterrows %}
     <tr>
         <th>{{ index }}</th>
