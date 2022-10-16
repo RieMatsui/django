@@ -26,8 +26,8 @@ def index(request):
 def get_sale_per_product(request):
     template_name = 'processing_data/customer/sale_per_product.html'
     sale = m_sale.Sale.get_sale_data()
+    sale_per_product = m_sale.Sale.get_sale_per_product(sale=sale)
 
-    sale_per_product = sale.pivot_table(index="purchase_date", columns='item_name', aggfunc='size', fill_value=0)
     column_count = len(sale_per_product.columns)
     context = {
         'sale_per_product': sale_per_product,
