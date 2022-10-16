@@ -4,7 +4,7 @@ import pandas as pd
 from ..lib.file import read
 
 
-class Customer(object):
+class CustomerModel(object):
 
     def __init__(self):
         self.customer = self.get_customer()

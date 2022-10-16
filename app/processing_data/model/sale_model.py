@@ -3,7 +3,7 @@ import pandas
 from ..lib.file import read
 
 
-class Sale(object):
+class SaleModel(object):
 
     def __init__(self):
         self.sale = self.get_sale_data()

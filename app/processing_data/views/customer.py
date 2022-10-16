@@ -4,20 +4,20 @@ from django.shortcuts import render
 from pandas import pandas
 
 from ..lib.file import read
-from ..model import customer as m_customer
-from ..model import sale as m_sale
+from ..service import customer_service
+from ..service import sale_service
 
 
 def index(request):
     # テンプレートファイル連携
     template_name = 'processing_data/customer/index.html'
-    saleObject = m_sale.Sale()
-    sale = saleObject.sale
-    sale_num = saleObject.num
+    saleService = sale_service.SaleService()
+    sale = saleService.get_sale_list()
+    sale_num = saleService.get_sale_num()
 
-    customerObject = m_customer.Customer()
-    customer = customerObject.customer
-    customer_num = customerObject.num
+    customerService = customer_service.CustomerService()
+    customer = customerService.get_customer()
+    customer_num = customerService.get_customer_num()
 
     context = {
         'sale': sale,
@@ -31,8 +31,8 @@ def index(request):
 def get_sale_per_product(request):
     template_name = 'processing_data/customer/sale_per_product.html'
 
-    sale = m_sale.Sale()
-    sale_per_product = sale.get_sale_per_product()
+    saleService = sale_service.SaleService()
+    sale_per_product = saleService.get_sale_per_product()
 
     column_count = len(sale_per_product.columns)
     context = {
@@ -46,8 +46,8 @@ def get_sale_per_price(request):
 
     template_name = 'processing_data/customer/sale_per_price.html'
 
-    sale = m_sale.Sale()
-    sale_per_price = sale.get_sale_per_price()
+    saleService = sale_service.SaleService()
+    sale_per_price = saleService.get_sale_per_price()
 
     column_count = len(sale_per_price.columns)
 
@@ -62,12 +62,12 @@ def get_monthly_user_num(request):
 
     template_name = 'processing_data/customer/monthly_user_num.html'
 
-    customer = m_customer.Customer()
-    monthly_user_num = customer.get_monthly_user_num()
+    customerService = customer_service.CustomerService()
+    monthly_user_num = customerService.get_monthly_user_num()
     monthly_user_num = monthly_user_num.to_dict()
 
     context = {
         'monthly_user_num': monthly_user_num,
-        'sum': customer.num,
+        'sum': customerService.get_customer_num(),
     }
     return render(request, template_name, context)
