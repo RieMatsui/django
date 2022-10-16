@@ -5,8 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5390621b-eeb3-48bb-bc76-5643d3ada9fd" name="Changes" comment="Changes">
+      <change afterPath="$PROJECT_DIR$/app/processing_data/model/customer.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/processing_data/templates/processing_data/customer/monthly_user_num.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/processing_data/templates/processing_data/customer/sale_per_price.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/processing_data/model/sale.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/processing_data/model/sale.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/processing_data/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/processing_data/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/processing_data/views/customer.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/processing_data/views/customer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/processing_data/views/sale.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/processing_data/views/sale.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,8 +22,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>

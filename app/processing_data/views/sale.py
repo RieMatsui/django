@@ -6,7 +6,8 @@ from django.shortcuts import render
 from matplotlib import pyplot
 from pandas import pandas
 
-from processing_data.lib.file import read
+from ..lib.file import read
+
 
 def index(request):
     df = read.csv_read('/data/sale/customer_master.csv')
@@ -33,7 +34,8 @@ def item_master(request):
 
 
 def get_item_data():
-    return read.csv_read('data/sale/item_master.csv');
+    return read.csv_read('data/sale/item_master.csv')
+
 
 def get_transaction_data():
     transaction_1 = read.csv_read('data/sale/transaction_1.csv')
@@ -43,10 +45,10 @@ def get_transaction_data():
 
 
 def transaction(request):
-    transaction = get_detail_data()
-    data_num = len(transaction)
+    t_detail = get_detail_data()
+    data_num = len(t_detail)
     context = {
-        'df': transaction,
+        'df': t_detail,
         'data_num': data_num,
     }
     return render(request, 'processing_data/sale/index.html', context)
