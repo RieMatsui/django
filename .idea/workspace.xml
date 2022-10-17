@@ -5,7 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5390621b-eeb3-48bb-bc76-5643d3ada9fd" name="Changes" comment="Changes">
-      <change beforePath="$PROJECT_DIR$/app/processing_data/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/processing_data/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/processing_data/model/ec/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/processing_data/model/ec/customer_model.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/processing_data/service/ec/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/processing_data/service/ec/customer_service.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/processing_data/views/ec.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/processing_data/views/ec.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -38,18 +42,18 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "com.google.cloudcode.ide_session_index": "20221017_0001",
-    "last_opened_file_path": "/Users/rie/develop/django/app/processing_data/service",
+    "last_opened_file_path": "/Users/rie/develop/django/app/processing_data/service/customer_service",
     "run.code.analysis.last.selected.profile": "aDefault",
     "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PythonContentEntriesConfigurable"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/processing_data/service/customer_service" />
       <recent name="$PROJECT_DIR$/app/processing_data/service" />
       <recent name="$PROJECT_DIR$/app/processing_data/model" />
       <recent name="$PROJECT_DIR$/app" />
       <recent name="$PROJECT_DIR$/app/practice/templates" />
-      <recent name="$PROJECT_DIR$/app/practice/templates/practice/while_practice" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/app/processing_data/model/shop" />
@@ -73,11 +77,41 @@
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
+        <entry key="30ae7b89-6393-4f69-a144-565ecd1e6b7d">
+          <value>
+            <State>
+              <option name="SHOW_ONLY_AFFECTED_CHANGES" value="true" />
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="HEAD" />
+                      </list>
+                    </value>
+                  </entry>
+                  <entry key="structure">
+                    <value>
+                      <list>
+                        <option value="dir:/Users/rie/develop/django/app/processing_data/lib" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
         <entry key="MAIN">
           <value>
             <State />
           </value>
         </entry>
+      </map>
+    </option>
+    <option name="OPEN_GENERIC_TABS">
+      <map>
+        <entry key="30ae7b89-6393-4f69-a144-565ecd1e6b7d" value="TOOL_WINDOW" />
       </map>
     </option>
   </component>

@@ -5,7 +5,7 @@ from django.shortcuts import render
 from matplotlib import pyplot
 from pandas import pandas
 
-from ..lib.file import read
+from processing_data.lib.file import read
 
 
 def index(request):
@@ -18,10 +18,6 @@ def index(request):
     return render(request, 'processing_data/ec/index.html', context)
 
 
-def get_customer_data():
-    return read.csv_read('/data/ec/customer_master.csv')
-
-
 def item_master(request):
     df = get_customer_data()
     data_num = len(df)
@@ -30,35 +26,6 @@ def item_master(request):
         'data_num': data_num,
     }
     return render(request, 'processing_data/ec/index.html', context)
-
-
-def get_item_data():
-    return read.csv_read('data/ec/item_master.csv')
-
-
-def get_transaction_data():
-    transaction_1 = read.csv_read('data/ec/transaction_1.csv')
-    transaction_2 = read.csv_read('data/ec/transaction_2.csv')
-    # データをユニオンする
-    return pandas.concat([transaction_1, transaction_2], ignore_index=True)
-
-
-def transaction(request):
-    t_detail = get_detail_data()
-    data_num = len(t_detail)
-    context = {
-        'df': t_detail,
-        'data_num': data_num,
-    }
-    return render(request, 'processing_data/ec/index.html', context)
-
-
-def get_detail_data():
-    transaction_detail_1 = read.csv_read('data/ec/transaction_detail_1.csv')
-    transaction_detail_2 = read.csv_read('data/ec/transaction_detail_2.csv')
-    # データをユニオンする
-    df_details = pandas.concat([transaction_detail_1, transaction_detail_2], ignore_index=True)
-    return df_details
 
 
 def transaction_detail(request):
@@ -72,11 +39,22 @@ def transaction_detail(request):
     return render(request, 'processing_data/ec/index.html', context)
 
 
+def transaction(request):
+    t_detail = get_transaction_data()
+    data_num = len(t_detail)
+    context = {
+        'df': t_detail,
+        'data_num': data_num,
+    }
+    return render(request, 'processing_data/ec/index.html', context)
+
+
 def sale_data(request):
     # トランザクションデータを取得する
     df_detail = get_detail_data()
     dt_transaction = get_transaction_data()
     dt_customer = get_customer_data()
+
     dt_item = get_item_data()
     join_data = pandas.merge(df_detail,
                              dt_transaction[["transaction_id", "payment_date", "customer_id"]],
@@ -145,3 +123,26 @@ def sale_data(request):
         'max_date': max_date,
     }
     return render(request, 'processing_data/ec/sale_data.html', context)
+
+
+def get_customer_data():
+    return read.csv_read('/data/ec/customer_master.csv')
+
+
+def get_item_data():
+    return read.csv_read('data/ec/item_master.csv')
+
+
+def get_transaction_data():
+    transaction_1 = read.csv_read('data/ec/transaction_1.csv')
+    transaction_2 = read.csv_read('data/ec/transaction_2.csv')
+    # データをユニオンする
+    return pandas.concat([transaction_1, transaction_2], ignore_index=True)
+
+
+def get_detail_data():
+    transaction_detail_1 = read.csv_read('data/ec/transaction_detail_1.csv')
+    transaction_detail_2 = read.csv_read('data/ec/transaction_detail_2.csv')
+    # データをユニオンする
+    df_details = pandas.concat([transaction_detail_1, transaction_detail_2], ignore_index=True)
+    return df_details
