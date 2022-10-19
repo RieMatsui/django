@@ -13,7 +13,8 @@ class CustomerService(object):
         return self.customer_model.num
 
     def get_monthly_user_num(self):
-        return self.customer_model.get_monthly_user_num()
+        monthly_user_num = self.customer_model.get_monthly_user_num()
+        return monthly_user_num.to_dict()
 
-    def get_customer(self):
-        return self.customer_model.get_customer()
+    def get_customer_all(self):
+        return self.customer_model.get_customer_all()

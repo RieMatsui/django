@@ -1,17 +1,19 @@
 from django.shortcuts import render
+from django.http import HttpRequest, HttpResponse
 
-from ..service.shop import customer_service, sale_service
+from processing_data.service.shop.customer_service import CustomerService
+from processing_data.service.shop.sale_service import SaleService
 
 
-def index(request):
+def index(request: HttpRequest) -> HttpResponse:
     # テンプレートファイル連携
     template_name = 'processing_data/shop/index.html'
-    saleService = sale_service.SaleService()
+    saleService = SaleService()
     sale = saleService.get_sale_list()
     sale_num = saleService.get_sale_num()
 
-    customerService = customer_service.CustomerService()
-    customer = customerService.get_customer()
+    customerService = CustomerService()
+    customer = customerService.get_customer_all()
     customer_num = customerService.get_customer_num()
 
     context = {
@@ -23,10 +25,10 @@ def index(request):
     return render(request, template_name, context)
 
 
-def get_sale_per_product(request):
+def get_sale_per_product(request: HttpRequest) -> HttpResponse:
     template_name = 'processing_data/shop/sale_per_product.html'
 
-    saleService = sale_service.SaleService()
+    saleService = SaleService()
     sale_per_product = saleService.get_sale_per_product()
 
     column_count = len(sale_per_product.columns)
@@ -37,11 +39,10 @@ def get_sale_per_product(request):
     return render(request, template_name, context)
 
 
-def get_sale_per_price(request):
-
+def get_sale_per_price(request: HttpRequest) -> HttpResponse:
     template_name = 'processing_data/shop/sale_per_price.html'
 
-    saleService = sale_service.SaleService()
+    saleService = SaleService()
     sale_per_price = saleService.get_sale_per_price()
 
     column_count = len(sale_per_price.columns)
@@ -53,14 +54,11 @@ def get_sale_per_price(request):
     return render(request, template_name, context)
 
 
-def get_monthly_user_num(request):
-
+def get_monthly_user_num(request: HttpRequest) -> HttpResponse:
     template_name = 'processing_data/shop/monthly_user_num.html'
 
-    customerService = customer_service.CustomerService()
+    customerService = CustomerService()
     monthly_user_num = customerService.get_monthly_user_num()
-    monthly_user_num = monthly_user_num.to_dict()
-
     context = {
         'monthly_user_num': monthly_user_num,
         'sum': customerService.get_customer_num(),

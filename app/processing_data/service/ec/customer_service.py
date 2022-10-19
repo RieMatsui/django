@@ -7,5 +7,5 @@ class CustomerService(object):
         self.customer_model = CustomerModel()
 
     def get_customer_list(self):
-        return self.customer_model.get_customer_list()
+        return self.customer_model.get_all()
 
