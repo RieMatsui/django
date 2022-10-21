@@ -78,3 +78,15 @@ def show_customer_sale(request: HttpRequest) -> HttpResponse:
         'customer_sale': customer_sale,
     }
     return render(request, template_name, context)
+
+
+def show_sale_per_customer(request: HttpRequest) -> HttpResponse:
+    template_name = 'processing_data/shop/sale_per_customer.html'
+
+    customer_service = CustomerService()
+    sale_per_customer = customer_service.get_sale_per_customer()
+
+    context = {
+        'sale_per_customer': sale_per_customer,
+    }
+    return render(request, template_name, context)

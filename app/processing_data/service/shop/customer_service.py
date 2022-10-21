@@ -46,12 +46,28 @@ class CustomerService(object):
         return customer.groupby(entry_year_and_month.col_name).count()[customer_name.col_name].to_dict()
 
     def get_customer_sale(self):
-        sale_service = SaleService()
         customer = self.get_customer_all()
-        sale = sale_service.get_sale_all()
         customer_name = CustomerName(customer)
+        sale_service = SaleService()
+        sale = sale_service.get_sale_all()
 
         join_data = pandas.merge(sale, customer, left_on=customer_name.col_name_en,
                                  right_on=customer_name.col_name, how='left')
         join_data = join_data.drop(customer_name.col_name_en, axis=1)
         return join_data
+
+    def get_sale_per_customer(self):
+        customer = self.get_customer_all()
+        customer_name = CustomerName(customer)
+        sale_service = SaleService()
+        sale = sale_service.get_sale_all()
+
+        join_data = pandas.merge(sale, customer, left_on=customer_name.col_name_en,
+                                 right_on=customer_name.col_name, how='left')
+        join_data = join_data.drop(customer_name.col_name_en, axis=1)
+        join_data.pivot_table(index='purchase_month', columns=customer_name.col_name,
+                              aggfunc='size', fill_value=0)
+
+
+
+
