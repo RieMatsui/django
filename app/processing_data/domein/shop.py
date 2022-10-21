@@ -1,12 +1,17 @@
 from processing_data.service.util.data_frame_service import DataFrameService
 
 
+class CustomerSale(object):
+    def __init__(self):
+        self.columns = ['purchase_date', 'purchase_month', 'item_name',
+                        'item_price', '顧客名', 'かな', '地域', 'メールアドレス', '登録日']
+
+
 class CustomerName(object):
     def __init__(self, customer):
         self.col_name = '顧客名'
-        self.dataframe = DataFrameService()
+        self.col_name_en = 'customer_name'
         self.row_customer_name = customer[self.col_name]
-        self.trim_customer_name = self.dataframe.trim_space(self.row_customer_name)
 
 
 class CustomerEntryYearAndMonth(object):

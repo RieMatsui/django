@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>売上集計（金額別）</h1>
+    <table class="table list-table table-striped">
+        <thead class="thead-dark">
+            <tr>
+                <th></th>
+                    {% for columns, item_name in sale_by_item.iteritems %}
+                <th>{{ columns }}</th>
+                    {% endfor %}
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th colspan="1">purchase_month</th>
+                <th colspan="{{ column_count }}"></th>
+            </tr>
+            {% for index, rows in sale_by_item.iterrows %}
+            <tr>
+                <th>{{ index }}</th>
+                {% for row in rows %}
+                <td>{{ row }}</td>
+                {% endfor %}
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

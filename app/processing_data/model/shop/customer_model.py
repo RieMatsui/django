@@ -14,6 +14,3 @@ class CustomerModel(object):
         # 顧客名の空白文字を揃える
         customer = read.excel_read('/data/shop/customer.xlsx')
         return customer
-
-
-

@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>売上・顧客データマスタ</h1>
+<table class="table list-table table-striped">
+    <thead class="thead-dark">
+        <tr>
+            <th></th>
+            {% for columns, item in customer_sale.iteritems %}
+            <th>{{ columns }}</th>
+            {% endfor %}
+        </tr>
+    </thead>
+    {% for index, rows in customer_sale.iterrows %}
+    <tr>
+        <th>{{ index }}</th>
+        {% for row in rows %}
+        <td>{{ row }}</td>
+        {% endfor %}
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}

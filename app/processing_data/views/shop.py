@@ -9,7 +9,7 @@ def index(request: HttpRequest) -> HttpResponse:
     # テンプレートファイル連携
     template_name = 'processing_data/shop/index.html'
     saleService = SaleService()
-    sale = saleService.get_sale_list()
+    sale = saleService.get_sale_all()
     sale_num = saleService.get_sale_num()
 
     customerService = CustomerService()
@@ -25,7 +25,7 @@ def index(request: HttpRequest) -> HttpResponse:
     return render(request, template_name, context)
 
 
-def get_sale_per_product(request: HttpRequest) -> HttpResponse:
+def show_sale_per_product(request: HttpRequest) -> HttpResponse:
     template_name = 'processing_data/shop/sale_per_product.html'
 
     saleService = SaleService()
@@ -39,7 +39,7 @@ def get_sale_per_product(request: HttpRequest) -> HttpResponse:
     return render(request, template_name, context)
 
 
-def get_sale_per_price(request: HttpRequest) -> HttpResponse:
+def show_sale_per_price(request: HttpRequest) -> HttpResponse:
     template_name = 'processing_data/shop/sale_per_price.html'
 
     saleService = SaleService()
@@ -54,13 +54,35 @@ def get_sale_per_price(request: HttpRequest) -> HttpResponse:
     return render(request, template_name, context)
 
 
-def get_monthly_user_num(request: HttpRequest) -> HttpResponse:
+def show_monthly_user_num(request: HttpRequest) -> HttpResponse:
     template_name = 'processing_data/shop/monthly_user_num.html'
 
-    customerService = CustomerService()
-    monthly_user_num = customerService.get_monthly_user_num()
+    customer_service = CustomerService()
+    monthly_user_num = customer_service.get_monthly_user_num()
     context = {
         'monthly_user_num': monthly_user_num,
-        'sum': customerService.get_customer_num(),
+        'sum': customer_service.get_customer_num(),
+    }
+    return render(request, template_name, context)
+
+
+def show_customer_sale(request: HttpRequest) -> HttpResponse:
+    template_name = 'processing_data/shop/customer_sale.html'
+
+    customer_service = CustomerService()
+    customer_sale = customer_service.get_customer_sale()
+    customer_service.dump_customer_sale(customer_sale, 'processing_data/static/csv/dump_data.csv', False)
+    context = {
+        'customer_sale': customer_sale,
+    }
+    return render(request, template_name, context)
+
+
+def show_sale_by_item(request: HttpRequest) -> HttpResponse:
+    template_name = 'processing_data/shop/sale_by_item.html'
+    customer_service = CustomerService()
+    sale_by_item = customer_service.sale_by_item()
+    context = {
+        'sale_by_item': sale_by_item,
     }
     return render(request, template_name, context)

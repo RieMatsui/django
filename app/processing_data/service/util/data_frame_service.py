@@ -4,13 +4,16 @@ import pandas
 class DataFrameService(object):
 
     @staticmethod
-    def trim_space(value):
+    def trim_space(data, column_name):
         """
-        トリムするためのクラス
-        :param value:
+        トリムするメソッド
+        :param data:
+        :param column_name:
         :return:
         """
-        return value.str.replace("　", "").replace(" ", "")
+        data[column_name] = data[column_name].str.replace("　", "")
+        data[column_name] = data[column_name].str.replace(" ", "")
+        return data
 
     @staticmethod
     def is_serial(value):

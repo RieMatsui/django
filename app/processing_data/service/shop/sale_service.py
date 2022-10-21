@@ -6,8 +6,8 @@ class SaleService(object):
     def __init__(self):
         self.sale_model = SaleModel()
 
-    def get_sale_list(self):
-        return self.sale_model.sale
+    def get_sale_all(self):
+        return self.sale_model.get_sale_all()
 
     def get_sale_num(self):
         return self.sale_model.num
