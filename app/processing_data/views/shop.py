@@ -3,6 +3,7 @@ from django.http import HttpRequest, HttpResponse
 
 from processing_data.service.shop.customer_service import CustomerService
 from processing_data.service.shop.sale_service import SaleService
+from processing_data.service.util.data_frame_service import DataFrameService
 
 
 def index(request: HttpRequest) -> HttpResponse:
@@ -70,19 +71,10 @@ def show_customer_sale(request: HttpRequest) -> HttpResponse:
     template_name = 'processing_data/shop/customer_sale.html'
 
     customer_service = CustomerService()
+    data_frame = DataFrameService()
     customer_sale = customer_service.get_customer_sale()
-    customer_service.dump_customer_sale(customer_sale, 'processing_data/static/csv/dump_data.csv', False)
+    data_frame.dump_customer_sale(customer_sale, 'processing_data/static/csv/dump_data.csv', False)
     context = {
         'customer_sale': customer_sale,
-    }
-    return render(request, template_name, context)
-
-
-def show_sale_by_item(request: HttpRequest) -> HttpResponse:
-    template_name = 'processing_data/shop/sale_by_item.html'
-    customer_service = CustomerService()
-    sale_by_item = customer_service.sale_by_item()
-    context = {
-        'sale_by_item': sale_by_item,
     }
     return render(request, template_name, context)

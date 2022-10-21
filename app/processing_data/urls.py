@@ -16,5 +16,4 @@ urlpatterns = [
                   path('shop/sale_per_price', shop.show_sale_per_price, name='sale_per_price'),
                   path('shop/monthly_user_num', shop.show_monthly_user_num, name='monthly_user_num'),
                   path('shop/customer_sale', shop.show_customer_sale, name='customer_sale'),
-                  path('shop/sale_by_item', shop.show_sale_by_item, name='sale_by_item'),
               ] + static(settings.STATIC_URL, document_root=settings.STATICFILES_DIRS)

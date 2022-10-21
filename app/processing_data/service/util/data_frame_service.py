@@ -1,4 +1,8 @@
+import os
+
 import pandas
+
+from config import settings
 
 
 class DataFrameService(object):
@@ -31,3 +35,20 @@ class DataFrameService(object):
 
         return pandas.concat([from_serial, from_string])
 
+    @staticmethod
+    def csv_read(file_path):
+        # TODO ファイルパスを適切に読み込みたい
+        filePath = settings.APP_URL + file_path
+        csv_data = pandas.read_csv(filePath)
+        return csv_data
+
+    @staticmethod
+    def excel_read(file_path):
+        # TODO ファイルパスを適切に読み込みたい
+        filePath = settings.APP_URL + file_path
+        csv_data = pandas.read_excel(filePath)
+        return csv_data
+
+    @staticmethod
+    def dump_customer_sale(dump_data, export_path, index=False):
+        dump_data.to_csv(export_path, index=index)

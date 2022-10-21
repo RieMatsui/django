@@ -2,7 +2,6 @@ import pandas
 
 from processing_data.domein.shop import CustomerName, CustomerEntryYearAndMonth
 from processing_data.domein.shop import CustomerEntryDay
-from processing_data.domein.shop import CustomerSale
 from processing_data.model.shop.customer_model import CustomerModel
 from processing_data.service.shop.sale_service import SaleService
 from processing_data.service.util.data_frame_service import DataFrameService
@@ -28,8 +27,6 @@ class CustomerService(object):
 
         # 名前の表記搖れを削除
         customer = data_flame.trim_space(customer, customer_name.col_name)
-        # customer[customer_name.col_name] = customer[customer_name.col_name].str.replace("　", "")
-        # customer[customer_name.col_name] = customer[customer_name.col_name].str.replace(" ", "")
 
         # 登録日が数値で登録されているかを確認
         is_num_format_day = data_flame.is_serial(entry_day.row_entry_day)
@@ -50,7 +47,6 @@ class CustomerService(object):
 
     def get_customer_sale(self):
         sale_service = SaleService()
-        customer_sale = CustomerSale()
         customer = self.get_customer_all()
         sale = sale_service.get_sale_all()
         customer_name = CustomerName(customer)
@@ -59,12 +55,3 @@ class CustomerService(object):
                                  right_on=customer_name.col_name, how='left')
         join_data = join_data.drop(customer_name.col_name_en, axis=1)
         return join_data
-
-    @staticmethod
-    def dump_customer_sale(dump_data, export_path, index=False):
-        dump_data.to_csv(export_path, index=index)
-
-    def sale_by_item(self):
-        customer_sale = self.get_customer_sale()
-        return customer_sale.pivot_table(index='purchase_month', columns='item_name', values='item_price',
-                                         aggfunc='sum', fill_value=0)

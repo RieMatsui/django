@@ -1,6 +1,4 @@
-from processing_data.lib.file import read
-from processing_data.domein.shop import CustomerEntryYearAndMonth, CustomerName
-from processing_data.domein.shop import CustomerEntryDay
+from processing_data.service.util.data_frame_service import DataFrameService
 
 
 class CustomerModel(object):
@@ -12,5 +10,5 @@ class CustomerModel(object):
     @staticmethod
     def get_customer_all():
         # 顧客名の空白文字を揃える
-        customer = read.excel_read('/data/shop/customer.xlsx')
+        customer = DataFrameService.excel_read('processing_data/static/data/shop/customer.xlsx')
         return customer

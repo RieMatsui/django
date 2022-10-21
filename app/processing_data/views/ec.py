@@ -5,11 +5,11 @@ from django.shortcuts import render
 from matplotlib import pyplot
 from pandas import pandas
 
-from processing_data.lib.file import read
+from processing_data.service.util.data_frame_service import DataFrameService
 
 
 def index(request):
-    df = read.csv_read('/data/ec/customer_master.csv')
+    df = DataFrameService.csv_read('processing_data/static/data/ec/customer_master.csv')
     data_num = len(df)
     context = {
         'df': df,
@@ -126,23 +126,23 @@ def sale_data(request):
 
 
 def get_customer_data():
-    return read.csv_read('/data/ec/customer_master.csv')
+    return DataFrameService.csv_read('processing_data/static/data/ec/customer_master.csv')
 
 
 def get_item_data():
-    return read.csv_read('/data/ec/item_master.csv')
+    return DataFrameService.csv_read('processing_data/static/data/ec/item_master.csv')
 
 
 def get_transaction_data():
-    transaction_1 = read.csv_read('/data/ec/transaction_1.csv')
-    transaction_2 = read.csv_read('/data/ec/transaction_2.csv')
+    transaction_1 = DataFrameService.csv_read('processing_data/static/data/ec/transaction_1.csv')
+    transaction_2 = DataFrameService.csv_read('processing_data/static/data/ec/transaction_2.csv')
     # データをユニオンする
     return pandas.concat([transaction_1, transaction_2], ignore_index=True)
 
 
 def get_detail_data():
-    transaction_detail_1 = read.csv_read('/data/ec/transaction_detail_1.csv')
-    transaction_detail_2 = read.csv_read('/data/ec/transaction_detail_2.csv')
+    transaction_detail_1 = DataFrameService.csv_read('processing_data/static/data/ec/transaction_detail_1.csv')
+    transaction_detail_2 = DataFrameService.csv_read('processing_data/static/data/ec/transaction_detail_2.csv')
     # データをユニオンする
     df_details = pandas.concat([transaction_detail_1, transaction_detail_2], ignore_index=True)
     return df_details

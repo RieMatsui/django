@@ -1,8 +1,8 @@
-from processing_data.lib.file import read
+from processing_data.service.util.data_frame_service import DataFrameService
 
 
 class CustomerModel(object):
 
     @staticmethod
     def get_all():
-        return read.csv_read('/data/ec/customer_master.csv')
+        return DataFrameService.csv_read('processing_data/static/data/ec/customer_master.csv')

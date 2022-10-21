@@ -1,6 +1,6 @@
 import pandas
 
-from processing_data.lib.file import read
+from processing_data.service.util.data_frame_service import DataFrameService
 
 
 class SaleModel(object):
@@ -11,7 +11,7 @@ class SaleModel(object):
 
     @staticmethod
     def get_sale_all():
-        sale = read.csv_read('/data/shop/sale.csv')
+        sale = DataFrameService.csv_read('processing_data/static/data/shop/sale.csv')
 
         sale["purchase_date"] = pandas.to_datetime(sale["purchase_date"])
         sale["purchase_month"] = sale["purchase_date"].dt.strftime("%Y%m")
