@@ -1,5 +1,4 @@
 import pandas
-import numpy
 from django.test import TestCase
 
 from processing_data.service.util.data_frame_service import DataFrameService
