@@ -1,4 +1,4 @@
-from processing_data.model.shop.sale_model import SaleModel
+from processing_data.models.shop.sale_model import SaleModel
 
 
 class SaleService(object):

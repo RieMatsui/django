@@ -1,10 +1,10 @@
 import pandas
 
-from processing_data.domein.shop import CustomerName, CustomerEntryYearAndMonth
-from processing_data.domein.shop import CustomerEntryDay
-from processing_data.model.shop.customer_model import CustomerModel
-from processing_data.service.shop.sale_service import SaleService
-from processing_data.service.util.data_frame_service import DataFrameService
+from processing_data.domeins.shop import CustomerName, CustomerEntryYearAndMonth
+from processing_data.domeins.shop import CustomerEntryDay
+from processing_data.models.shop.customer_model import CustomerModel
+from processing_data.services.shop.sale_service import SaleService
+from processing_data.services.util.data_frame_service import DataFrameService
 
 
 class CustomerService(object):

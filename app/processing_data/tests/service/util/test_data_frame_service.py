@@ -1,7 +1,7 @@
 import pandas
 from django.test import TestCase
 
-from processing_data.service.util.data_frame_service import DataFrameService
+from processing_data.services.util.data_frame_service import DataFrameService
 
 
 class DataFrameServiceTests(TestCase):

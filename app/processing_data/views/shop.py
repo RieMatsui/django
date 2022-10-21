@@ -1,9 +1,9 @@
 from django.shortcuts import render
 from django.http import HttpRequest, HttpResponse
 
-from processing_data.service.shop.customer_service import CustomerService
-from processing_data.service.shop.sale_service import SaleService
-from processing_data.service.util.data_frame_service import DataFrameService
+from processing_data.services.shop.customer_service import CustomerService
+from processing_data.services.shop.sale_service import SaleService
+from processing_data.services.util.data_frame_service import DataFrameService
 
 
 def index(request: HttpRequest) -> HttpResponse:

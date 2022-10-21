@@ -5,7 +5,7 @@ from django.shortcuts import render
 from matplotlib import pyplot
 from pandas import pandas
 
-from processing_data.service.util.data_frame_service import DataFrameService
+from processing_data.services.util.data_frame_service import DataFrameService
 
 
 def index(request):

@@ -37,14 +37,12 @@ class DataFrameService(object):
 
     @staticmethod
     def csv_read(file_path):
-        # TODO ファイルパスを適切に読み込みたい
         filePath = settings.APP_URL + file_path
         csv_data = pandas.read_csv(filePath)
         return csv_data
 
     @staticmethod
     def excel_read(file_path):
-        # TODO ファイルパスを適切に読み込みたい
         filePath = settings.APP_URL + file_path
         csv_data = pandas.read_excel(filePath)
         return csv_data

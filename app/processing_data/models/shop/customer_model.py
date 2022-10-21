@@ -1,4 +1,4 @@
-from processing_data.service.util.data_frame_service import DataFrameService
+from processing_data.services.util.data_frame_service import DataFrameService
 
 
 class CustomerModel(object):
