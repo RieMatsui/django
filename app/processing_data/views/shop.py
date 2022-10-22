@@ -15,7 +15,7 @@ def index(request: HttpRequest) -> HttpResponse:
 
     customerService = CustomerService()
     customer = customerService.get_customer_all()
-    customer_num = customerService.get_customer_num()
+    customer_num = len(customer)
 
     context = {
         'sale': sale,
