@@ -96,6 +96,9 @@ DATABASES = {
         'PASSWORD': env.get_value('DATABASE_PASSWORD'),
         'HOST': env.get_value('DATABASE_HOST'),
         'PORT': env.get_value('DATABASE_PORT'),
+        'TEST': {
+            'NAME': 'custom_test_database'
+        }
     }
 }
 
@@ -136,3 +139,5 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 APP_URL = '/usr/src/app/'
+
+YOUTUBE_API_KEY = env.get_value('YOUTUBE_API_KEY')
