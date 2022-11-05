@@ -16,9 +16,13 @@ class YoutubeListService(object):
         channels = self.youtube_list_api.get_channel_by_url()
         return channels
 
-    def get_channel_list(self):
-        channel_list = self.youtube_list_api.get_channels_list()
+    def get_channel_list(self, channel_id):
+        channel_list = self.youtube_list_api.get_channels_list(channel_id)
         return channel_list
+
+    def get_playlists(self, channel_id):
+        playlists = self.youtube_list_api.get_playlists(channel_id)
+        return playlists
 
 
 
