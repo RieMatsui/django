@@ -42,15 +42,17 @@ ALLOWED_HOSTS = ['localhost', '127.0.0.1']
 # Application definition
 
 INSTALLED_APPS = [
-    'processing_data.apps.ProcessingDataConfig',
-    'andOr.apps.AndorConfig',
-    'practice.apps.PracticeConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
+    'andOr.apps.AndorConfig',
+    'practice.apps.PracticeConfig',
+    'processing_data.apps.ProcessingDataConfig',
+    'youtube.apps.YoutubeConfig',
 ]
 
 MIDDLEWARE = [
@@ -94,6 +96,9 @@ DATABASES = {
         'PASSWORD': env.get_value('DATABASE_PASSWORD'),
         'HOST': env.get_value('DATABASE_HOST'),
         'PORT': env.get_value('DATABASE_PORT'),
+        'TEST': {
+            'NAME': 'custom_test_database'
+        }
     }
 }
 
@@ -134,3 +139,5 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 APP_URL = '/usr/src/app/'
+
+YOUTUBE_API_KEY = env.get_value('YOUTUBE_API_KEY')
