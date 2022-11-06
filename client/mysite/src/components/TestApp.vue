@@ -1,5 +1,5 @@
 <template>
-    <div class="test-app">
+    <div class="test">
         <h1>{{ msg }}</h1>
         <router-link to="/">TOP</router-link>
     </div>
@@ -7,7 +7,7 @@
 
 <script>
     export default {
-        name: "test-app",
+        name: "TestApp",
         data() {
             return {
                 msg: 'test message',
