@@ -1,11 +1,14 @@
 import Vue from 'vue'
-import Vuetify from 'vuetify'
-import 'vuetify/dist/vuetify.min.css'
 import App from './App.vue'
+import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
+import Vuetify from 'vuetify'
+import vuetify from './plugins/vuetify'
+import 'vuetify/dist/vuetify.min.css'
 import VueRouter from 'vue-router'
 import UserAccount from '@/components/UserAccount'
 import HomeBase from '@/components/HomeBase'
-import vuetify from './plugins/vuetify'
+import 'bootstrap/dist/css/bootstrap.css'
+import 'bootstrap-vue/dist/bootstrap-vue.css'
 
 
 Vue.use(Vuetify)
@@ -15,6 +18,12 @@ const opts = {}
 export default new Vuetify(opts)
 
 Vue.use(VueRouter)
+
+// BootstrapVueをプロジェクト全体で利用できるようにする
+Vue.use(BootstrapVue)
+
+// BootstrapVueアイコンコンポーネントプラグインの使用
+Vue.use(IconsPlugin)
 
 const router = new VueRouter({
   mode: 'history',

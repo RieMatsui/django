@@ -1,8 +1,10 @@
 <template>
   <v-app id="app">
-    <v-card class="mx-auto overflow-hidden" height="400" width="100%">
+    <v-card class="mx-auto overflow-hidden" min-height="750px" width="100%">
     <HeaderHtml></HeaderHtml>
-    <router-view/>
+    <v-card class="p-3 m-2" elevation="3" outlined>
+      <router-view/>
+    </v-card>
     </v-card>
     <FooterHtml></FooterHtml>
   </v-app>
@@ -17,7 +19,6 @@ export default {
     HeaderHtml,
     FooterHtml,
   },
-
   data: () => ({
 
   }),
