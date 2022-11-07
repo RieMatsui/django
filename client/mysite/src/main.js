@@ -1,28 +1,48 @@
 import Vue from 'vue'
 import App from './App.vue'
+import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
+import Vuetify from 'vuetify'
+import vuetify from './plugins/vuetify'
+import 'vuetify/dist/vuetify.min.css'
 import VueRouter from 'vue-router'
-import TestApp from '@/components/TestApp'
-import HelloWorld from '@/components/HelloWorld'
+import UserAccount from '@/components/UserAccount'
+import HomeBase from '@/components/HomeBase'
+import 'bootstrap/dist/css/bootstrap.css'
+import 'bootstrap-vue/dist/bootstrap-vue.css'
+
+
+Vue.use(Vuetify)
+
+const opts = {}
+
+export default new Vuetify(opts)
 
 Vue.use(VueRouter)
+
+// BootstrapVueをプロジェクト全体で利用できるようにする
+Vue.use(BootstrapVue)
+
+// BootstrapVueアイコンコンポーネントプラグインの使用
+Vue.use(IconsPlugin)
 
 const router = new VueRouter({
   mode: 'history',
   routes: [
     {
       path: '/',
-      name: 'HelloWorld',
-      component: HelloWorld
+      name: 'HomeBase',
+      component: HomeBase
     },
     {
-      path: '/test',
-      name: 'TestApp',
-      component: TestApp
+      path: '/acount',
+      name: 'UserAccount',
+      component: UserAccount
     },
   ]
 })
 
 new Vue({
-  router, //追加
+  router,
+  vuetify,
   render: h => h(App)
 }).$mount('#app')

@@ -1,13 +1,13 @@
 <template>
-    <div class="test">
+    <div class="acount">
         <h1>{{ msg }}</h1>
-        <router-link to="/">TOP</router-link>
+        userAccount
     </div>
 </template>
 
 <script>
     export default {
-        name: "TestApp",
+        name: "UserAccount",
         data() {
             return {
                 msg: 'test message',

@@ -1,23 +1,23 @@
 <template>
-    <div class="footer">
-        <h1>{{ msg }}</h1>
-    </div>
+    <v-footer padless>
+    </v-footer>
 </template>
 
 <script>
-    export default {
+export default {
     name: 'FooterHtml',
-    data () {
+    data() {
         return {
-                msg: 'Footer'
-            }
+            msg: 'Footer'
         }
     }
+}
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-    h1, h2 {
-        font-weight: normal;
-    }
+h1,
+h2 {
+    font-weight: normal;
+}
 </style>

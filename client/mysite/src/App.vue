@@ -1,31 +1,26 @@
 <template>
-  <div id="app">
-    <HeaderHtml/>
-    <router-view/>
-    <FooterHtml/>
-  </div>
+  <v-app id="app">
+    <v-card class="mx-auto overflow-hidden" min-height="750px" width="100%">
+    <HeaderHtml></HeaderHtml>
+    <v-card class="p-3 m-2" elevation="3" outlined>
+      <router-view/>
+    </v-card>
+    </v-card>
+    <FooterHtml></FooterHtml>
+  </v-app>
 </template>
-
 <script>
-import HeaderHtml from "./components/common/HeaderHtml.vue";
-import FooterHtml from "./components/common/FooterHtml.vue";
+import HeaderHtml from './components/common/HeaderHtml';
+import FooterHtml from './components/common/FooterHtml';
 
 export default {
   name: 'App',
   components: {
     HeaderHtml,
     FooterHtml,
-  }
-}
-</script>
+  },
+  data: () => ({
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
+  }),
+};
+</script>
