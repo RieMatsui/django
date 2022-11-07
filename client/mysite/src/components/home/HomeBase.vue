@@ -12,14 +12,10 @@
       <h2>{{ '¥' + (price * 1.08) }}</h2>
       <v-text-field class="m-2" label="Price input" hide-details="auto" v-on:input="calc();"></v-text-field>
     </v-card>
-    <HomeList></HomeList>
-    <HomeFontSize></HomeFontSize>
   </div>
 </template>
 
 <script>
-import HomeFontSize from './HomeFontSize.vue';
-import HomeList from './HomeList.vue';
 export default {
 
   name: "HomeBase",
@@ -40,9 +36,5 @@ export default {
       this.price = event.target.value;
     }
   },
-  components: {
-    HomeList,
-    HomeFontSize
-}
 }
 </script>

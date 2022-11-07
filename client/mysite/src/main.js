@@ -7,6 +7,7 @@ import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
 import VueRouter from 'vue-router'
 import UserAccount from '@/components/UserAccount'
 import HomeBase from '@/components/home/HomeBase'
+import TestBase from '@/components/test/TestBase'
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 
@@ -38,6 +39,11 @@ const router = new VueRouter({
       path: '/acount',
       name: 'UserAccount',
       component: UserAccount
+    },
+    {
+      path: '/test',
+      name: 'TestBase',
+      component: TestBase,
     },
   ]
 })
