@@ -4,7 +4,7 @@ import 'vuetify/dist/vuetify.min.css'
 import App from './App.vue'
 import VueRouter from 'vue-router'
 import UserAccount from '@/components/UserAccount'
-import HelloWorld from '@/components/HelloWorld'
+import HomeBase from '@/components/HomeBase'
 import vuetify from './plugins/vuetify'
 
 
@@ -21,8 +21,8 @@ const router = new VueRouter({
   routes: [
     {
       path: '/',
-      name: 'HelloWorld',
-      component: HelloWorld
+      name: 'HomeBase',
+      component: HomeBase
     },
     {
       path: '/acount',
