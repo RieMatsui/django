@@ -1,8 +1,18 @@
 import Vue from 'vue'
+import Vuetify from 'vuetify'
+import 'vuetify/dist/vuetify.min.css'
 import App from './App.vue'
 import VueRouter from 'vue-router'
-import TestApp from '@/components/TestApp'
+import UserAccount from '@/components/UserAccount'
 import HelloWorld from '@/components/HelloWorld'
+import vuetify from './plugins/vuetify'
+
+
+Vue.use(Vuetify)
+
+const opts = {}
+
+export default new Vuetify(opts)
 
 Vue.use(VueRouter)
 
@@ -15,14 +25,15 @@ const router = new VueRouter({
       component: HelloWorld
     },
     {
-      path: '/test',
-      name: 'TestApp',
-      component: TestApp
+      path: '/acount',
+      name: 'UserAccount',
+      component: UserAccount
     },
   ]
 })
 
 new Vue({
-  router, //追加
+  router,
+  vuetify,
   render: h => h(App)
 }).$mount('#app')

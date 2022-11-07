@@ -1,25 +1,50 @@
 <template>
-    <header>
-        <div class="header">
-            <h1>{{ msg }}</h1>
-        </div>
-    </header>
-</template>
+    <div>
+        <v-app-bar color="deep-purple" dark>
+            <v-app-bar-nav-icon @click="drawer = true"></v-app-bar-nav-icon>
 
+            <v-toolbar-title>{{ msg }}</v-toolbar-title>
+        </v-app-bar>
+
+        <v-navigation-drawer v-model="drawer" absolute temporary>
+            <v-list nav dense>
+                <v-list-item-group v-model="group" active-class="deep-purple--text text--accent-4">
+                    <v-list-item>
+                        <v-list-item-icon>
+                            <v-icon>mdi-home</v-icon>
+                        </v-list-item-icon>
+                        <v-list-item-title>
+                            Home
+                        </v-list-item-title>
+                    </v-list-item>
+                    <router-link to="/acount">
+                    <v-list-item>
+                        <v-list-item-icon>
+                            <v-icon>mdi-account</v-icon>
+                        </v-list-item-icon>
+                        <v-list-item-title>Account</v-list-item-title>
+                    </v-list-item>
+                    </router-link>
+                </v-list-item-group>
+            </v-list>
+        </v-navigation-drawer>
+    </div>
+</template>
 <script>
-    export default {
-        name: "HeaderHtml",
-     data() {
-        return {
-                msg: 'Header',
-            }
-        }
-    }
+export default {
+    name: "HeaderHtml",
+    data: () => ({
+        drawer: false,
+        group: null,
+        msg: 'TestApp',
+    }),
+}
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-    h1, h2 {
-        font-weight: normal;
-    }
+h1,
+h2 {
+    font-weight: normal;
+}
 </style>
