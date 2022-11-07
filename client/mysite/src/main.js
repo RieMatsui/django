@@ -6,10 +6,11 @@ import 'vuetify/dist/vuetify.min.css'
 import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
 import VueRouter from 'vue-router'
 import UserAccount from '@/components/UserAccount'
-import HomeBase from '@/components/HomeBase'
+import HomeBase from '@/components/home/HomeBase'
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 
+Vue.config.devtools = true;
 
 Vue.use(Vuetify)
 

@@ -1,7 +1,6 @@
 <template>
   <div id="top-card">
     <v-card class="m-2 p-2">
-      <h1>{{ message }}</h1>
       <h1>{{ message.toUpperCase() }}</h1>
       <v-text-field class="m-2" label="Main input" hide-details="auto" v-on:input="showTypeMessage();"></v-text-field>
       <v-btn elevation="2" large v-on:click="doAction();">
@@ -13,17 +12,21 @@
       <h2>{{ '¥' + (price * 1.08) }}</h2>
       <v-text-field class="m-2" label="Price input" hide-details="auto" v-on:input="calc();"></v-text-field>
     </v-card>
+    <HomeList></HomeList>
+    <HomeFontSize></HomeFontSize>
   </div>
 </template>
 
 <script>
-
+import HomeFontSize from './HomeFontSize.vue';
+import HomeList from './HomeList.vue';
 export default {
+
   name: "HomeBase",
   data() {
     return {
       message: 'Top Page',
-      price: 0,
+      price: 1,
     }
   },
   methods: {
@@ -35,30 +38,11 @@ export default {
     },
     calc() {
       this.price = event.target.value;
-      
     }
-  }
+  },
+  components: {
+    HomeList,
+    HomeFontSize
 }
-
+}
 </script>
-
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-h3 {
-  margin: 40px 0 0;
-}
-
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-
-a {
-  color: #42b983;
-}
-</style>
