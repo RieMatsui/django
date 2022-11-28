@@ -23,6 +23,12 @@
                         </v-list-item-icon>
                         <v-list-item-title>Account</v-list-item-title>
                     </v-list-item>
+                    <v-list-item to="/test">
+                        <v-list-item-icon>
+                            <v-icon>mdi-test-tube</v-icon>
+                        </v-list-item-icon>
+                        <v-list-item-title>Test</v-list-item-title>
+                    </v-list-item>
                 </v-list-item-group>
             </v-list>
         </v-navigation-drawer>

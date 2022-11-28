@@ -1,19 +1,15 @@
 <template>
     <div class="acount">
-        <h1>{{ msg }}</h1>
-        userAccount
+        <ol v-html="message"></ol>
     </div>
 </template>
 
 <script>
-    export default {
-        name: "UserAccount",
-        data() {
-            return {
-                msg: 'test message',
-            }
-        }
+export default {
+    data() {
+        return { message : '<li>User Acount</li>'}
     }
+}
 </script>
 
 <style scoped>
