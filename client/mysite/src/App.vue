@@ -1,12 +1,12 @@
 <template>
   <v-app id="app">
     <v-card class="mx-auto overflow-hidden" min-height="750px" width="100%">
-    <HeaderHtml></HeaderHtml>
-    <v-card class="p-3 m-2" elevation="3" outlined>
-      <router-view/>
+      <HeaderHtml></HeaderHtml>
+      <div class="p-3 m-2" elevation="3" outlined>
+        <router-view />
+      </div>
+      <FooterHtml></FooterHtml>
     </v-card>
-    </v-card>
-    <FooterHtml></FooterHtml>
   </v-app>
 </template>
 <script>
