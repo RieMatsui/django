@@ -7,4 +7,4 @@ RUN npm install -g @vue/cli
 RUN npm install -g @vue/cli-service-global
 
 ENV HOST 0.0.0.0
-EXPOSE 8080
+EXPOSE 8888

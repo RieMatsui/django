@@ -51,7 +51,7 @@ services:
     volumes:
       - ./client/mysite:/usr/src/app/
     ports:
-      - "8080:8080"
+      - "8888:8888"
     tty: true
     stdin_open: true
     depends_on:
